@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerCam : MonoBehaviour
+{
+    public float sensX;
+    public float sensY;
+
+    public Transform orientation;
+
+    float _xRotation;
+    float _yRotation;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        float _mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
+        float _mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+
+        _yRotation += _mouseX;
+        _xRotation -= _mouseY;
+
+        _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+
+        transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
+        orientation.rotation = Quaternion.Euler(0, _yRotation, 0);
+    }
+}
