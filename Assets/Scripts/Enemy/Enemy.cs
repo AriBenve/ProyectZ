@@ -34,7 +34,9 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        StartCoroutine(ReduceToDeath());
+        //StartCoroutine(ReduceToDeath());
+
+        Destroy(this.gameObject);
     }
 
     IEnumerator GetHitFeedback()
@@ -77,6 +79,6 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
 
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
