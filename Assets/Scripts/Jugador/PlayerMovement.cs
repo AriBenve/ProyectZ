@@ -9,8 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
     public float walkSpeed;
 
+    public float dashSpeed;
+    public float dashSpeedChangeFactor;
+
+    public float maxYspeed;
+
     public float groundDrag;
 
+    [Header("Jump")]
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -41,7 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
     public MovementState state;
 
-    public enum MovementState {sprinting, walking, air}
+    public enum MovementState {sprinting, walking, dashing, air}
+
+    public bool dashing;
 
     private void Start()
     {
@@ -58,12 +66,10 @@ public class PlayerMovement : MonoBehaviour
         _SpeedControl();
         _StateHandler();
 
-        if (_grounded)
+        if (state == MovementState.walking || state == MovementState.sprinting)
             _rb.drag = groundDrag;
         else
             _rb.drag = 0;
-
-        Debug.Log(_OnSlope());
     }
 
     private void FixedUpdate()
@@ -86,26 +92,91 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private float _desiredMoveSpeed;
+    private float _lastDesiredMoveSpeed;
+    private MovementState _lastState;
+    private bool _keepMomentum;
+
     private void _StateHandler()
     {
-        if(_grounded && Input.GetKey(sprintKey))
+        if(dashing)
+        {
+            _speedChangeFactor = dashSpeedChangeFactor;
+            state = MovementState.dashing;
+            _desiredMoveSpeed = dashSpeed;
+        }
+        else if(_grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            _desiredMoveSpeed = sprintSpeed;
         }
         else if(_grounded)
         {
             state = MovementState.walking;
-            moveSpeed = walkSpeed;
+            _desiredMoveSpeed = walkSpeed;
         }
         else
         {
             state= MovementState.air;
+
+            if (_desiredMoveSpeed < sprintSpeed)
+                _desiredMoveSpeed = walkSpeed;
+            else
+                _desiredMoveSpeed = sprintSpeed;
         }
+
+        bool _desiredMoveSpeedHasChange = _desiredMoveSpeed != _lastDesiredMoveSpeed;
+
+        if(_lastState == MovementState.dashing) _keepMomentum = true;
+
+        if(_desiredMoveSpeedHasChange)
+        {
+            if(_keepMomentum)
+            {
+                StopAllCoroutines();
+                StartCoroutine(_SmoothlyLerpMoveSpeed());
+            }
+            else
+            {
+                StopAllCoroutines();
+                moveSpeed = _desiredMoveSpeed;
+            }
+        }
+
+
+        _lastDesiredMoveSpeed = _desiredMoveSpeed;
+        _lastState = state;
     }
+
+    private float _speedChangeFactor;
+
+    private IEnumerator _SmoothlyLerpMoveSpeed()
+    {
+        float time = 0;
+        float diference = Mathf.Abs(_desiredMoveSpeed - moveSpeed);
+        float startValue = moveSpeed;
+
+        float boostFactor = _speedChangeFactor;
+
+        while (time < diference)
+        {
+            moveSpeed = Mathf.Lerp(startValue, _desiredMoveSpeed, time / diference);
+
+            time += Time.deltaTime * boostFactor;
+
+            yield return null;
+        }
+
+        moveSpeed = _desiredMoveSpeed;
+        _speedChangeFactor = 1f;
+        _keepMomentum = false;
+    }
+
 
     private void _MovePlayer()
     {
+        if (state == MovementState.dashing) return;
+
         _moveDirection = orientation.forward * _verticalInput + orientation.right * _horizontalInput;
 
         //Slope movement
@@ -146,6 +217,9 @@ public class PlayerMovement : MonoBehaviour
                 _rb.velocity = new Vector3(_limitedVelocity.x, _rb.velocity.y, _limitedVelocity.z);
             }
         }
+
+        if(maxYspeed != 0 && _rb.velocity.y > maxYspeed)
+            _rb.velocity = new Vector3(_rb.velocity.x, maxYspeed, _rb.velocity.z);
         
     }
 
