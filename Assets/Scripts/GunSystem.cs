@@ -23,7 +23,6 @@ public class GunSystem : MonoBehaviour
 
     [Header("Graphics")]
     public GameObject muzzleFlash, bulletHoleGraphic;
-    public CameraShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
@@ -69,8 +68,6 @@ public class GunSystem : MonoBehaviour
             if(rayHit.collider.CompareTag("Enemy"))
                 rayHit.collider.GetComponent<Enemy>().GetHit(dmg);
         }
-
-        camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);

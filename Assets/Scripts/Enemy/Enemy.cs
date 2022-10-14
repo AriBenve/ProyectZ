@@ -13,6 +13,13 @@ public class Enemy : MonoBehaviour
 
     Coroutine _getHitFeedback_Cor;
 
+    private void Start()
+    {
+
+        _myMaterial = GetComponent<Renderer>().material;
+
+    }
+
     public void GetHit(float dmg)
     {
         _life -= dmg;
