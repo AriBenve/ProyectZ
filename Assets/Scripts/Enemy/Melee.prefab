@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 8375057400547236217}
   - component: {fileID: 8375057400547236216}
   - component: {fileID: 8375057400547236223}
-  - component: {fileID: 8375057400547236222}
+  - component: {fileID: 8751262399349521158}
   - component: {fileID: 8375057400547236221}
   - component: {fileID: 8375057400547236220}
   m_Layer: 7
@@ -158,7 +158,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8375057400547236222
+--- !u!114 &8751262399349521158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,21 +167,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8375057400547236099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd8d8fa30a59b14b9a5df191bd478f4, type: 3}
+  m_Script: {fileID: 11500000, guid: fdce3026a58bf994fab33d3121bf816d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8375057400547236220}
   player: {fileID: 0}
-  projectile: {fileID: 0}
   FloorMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 64
-  timeBetweenAttacks: 2
-  sightRange: 1
-  attackRange: 2
+    m_Bits: 0
+  timeBetweenAttacks: 0
+  sightRange: 0
+  attackRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!114 &8375057400547236221
