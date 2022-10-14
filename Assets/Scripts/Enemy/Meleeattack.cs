@@ -20,10 +20,6 @@ public class Meleeattack : MonoBehaviour
         if (p != null)
         {
             p.Damage(damage);
-
-
-            
-
         }
 
     }

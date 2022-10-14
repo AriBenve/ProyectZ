@@ -10,9 +10,4 @@ public class Player : MonoBehaviour,Idamage
     {
         _life -= d;
     }
-
-    public void takedamage(float d)
-    {
-        
-    }
 }

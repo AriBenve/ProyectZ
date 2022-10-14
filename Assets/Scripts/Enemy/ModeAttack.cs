@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class ModeAttack : MonoBehaviour
 {
-    public GameObject projectile;
     public NavMeshAgent enemy;
     public Transform player;
 
@@ -46,11 +45,11 @@ public class ModeAttack : MonoBehaviour
 
         if (!alreadyAttack)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
 
             alreadyAttack = true;
-            Invoke(nameof(ResetAtatck), timeBetweenAttacks);
+            //Invoke(nameof(ResetAtatck), timeBetweenAttacks);
         }
     }
 
