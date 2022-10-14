@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 141335220}
   - component: {fileID: 141335222}
   - component: {fileID: 141335223}
-  - component: {fileID: 141335224}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -267,19 +266,6 @@ MonoBehaviour:
   resetVel: 1
   dashCd: 0.75
   dashKey: 101
---- !u!114 &141335224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141335219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e99ca57c2b4d644393f03a22a6734a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _life: 100
 --- !u!1 &566107720
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +749,7 @@ GameObject:
   - component: {fileID: 1692758571}
   - component: {fileID: 1692758570}
   - component: {fileID: 1692758569}
+  - component: {fileID: 1692758572}
   m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
@@ -847,6 +834,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692758567}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1692758572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692758567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e99ca57c2b4d644393f03a22a6734a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _life: 100
 --- !u!1 &1693872902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1530,10 @@ PrefabInstance:
     - target: {fileID: 6042306717099922418, guid: fd7a95ec9bceadc478a14b040bbd6b4b, type: 3}
       propertyPath: m_Name
       value: Invoker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042306717099922418, guid: fd7a95ec9bceadc478a14b040bbd6b4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd7a95ec9bceadc478a14b040bbd6b4b, type: 3}
