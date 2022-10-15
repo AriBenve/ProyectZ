@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour,Idamage
 {
-    public float _life;
+    public float life;
 
     private void Start()
     {
-        _life = 100;
+        life = 100;
     }
 
     private void Update()
     {
-        if(_life <= 0)
+        if(life <= 0)
         {
             Death();
         }
@@ -22,8 +22,8 @@ public class Player : MonoBehaviour,Idamage
 
     public void Damage(float d)
     {
-        _life -= d;
-        Debug.Log(_life);
+        life -= d;
+        Debug.Log(life);
     }
 
     public void Death()
