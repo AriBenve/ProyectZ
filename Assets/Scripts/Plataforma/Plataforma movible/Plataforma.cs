@@ -30,9 +30,9 @@ public class Plataforma : MonoBehaviour
     }
     
     IEnumerator TimeMove()
-        {
-            moveNext = false;
-            yield return new WaitForSeconds(timeToNext);
-            moveNext = true;
-        }
+    {
+        moveNext = false;
+        yield return new WaitForSeconds(timeToNext);
+        moveNext = true;
+    }
 }

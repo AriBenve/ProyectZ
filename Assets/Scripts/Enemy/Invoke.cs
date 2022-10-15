@@ -12,6 +12,8 @@ public class Invoke : MonoBehaviour
     [SerializeField]
     private int timeInterval;
 
+    private int counter = 0;
+
     private void Start()
     {
         StartCoroutine(spawnEnemy(timeInterval, enemies));
@@ -24,6 +26,11 @@ public class Invoke : MonoBehaviour
         yield return new WaitForSeconds(interval);
         GameObject newEnemy = Instantiate(enemy[i], spawnPoint.position, Quaternion.identity);
 
-        StartCoroutine(spawnEnemy(interval, enemy));
+        if(counter <= 10)
+        {
+            counter++;
+            StartCoroutine(spawnEnemy(interval, enemy));
+        }
+        
     }
 }
