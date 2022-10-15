@@ -8,7 +8,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public NavMeshAgent enemy;
     public Transform player;
-   
+    private Animator _momiaAnimator;
 
     public LayerMask FloorMask, PlayerMask;
 
@@ -21,7 +21,9 @@ public class MeleeEnemy : MonoBehaviour
     public void Awake()
     {
         player = GameObject.Find("Player").transform;
+        _momiaAnimator = GetComponent<Animator>();
         enemy = GetComponent<NavMeshAgent>();
+        
     }
 
     private void Update()
@@ -30,9 +32,18 @@ public class MeleeEnemy : MonoBehaviour
 
         enemy.SetDestination(player.position);
 
+        _momiaAnimator.SetFloat("Speed", enemy.velocity.magnitude);
+
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, PlayerMask);
 
-        
+        if (playerInSightRange && playerInAttackRange)
+        {
+            _momiaAnimator.SetBool("Attacking", true);
+        }
+        else
+        {
+            _momiaAnimator.SetBool("Attacking", false);
+        }
     }
 
 

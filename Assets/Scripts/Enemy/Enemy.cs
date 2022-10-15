@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
 
@@ -12,6 +13,8 @@ public class Enemy : MonoBehaviour
     Color _initialColor;
 
     Coroutine _getHitFeedback_Cor;
+
+    //Animator _enemyAnimator;
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
         if (_getHitFeedback_Cor != null)
         {
             StopCoroutine(_getHitFeedback_Cor);
+            
         }
 
         if (_life <= 0)
@@ -41,9 +45,11 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        //StartCoroutine(ReduceToDeath());
+        //_enemyAnimator.SetBool("Dying", true);
+        StartCoroutine(ReduceToDeath());
 
-        Destroy(this.gameObject);
+        
+        
     }
 
     IEnumerator GetHitFeedback()
@@ -85,7 +91,7 @@ public class Enemy : MonoBehaviour
 
             yield return null;
         }
-
+        //_enemyAnimator.SetBool("Dying", false);
         Destroy(this.gameObject);
     }
 }
