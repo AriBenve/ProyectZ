@@ -6,26 +6,46 @@ public class AutoAim : MonoBehaviour
 {
     public GameObject Ballesta;
     public Transform aimPosition;
+    private Transform _normalPos;
     GameObject CurrentTarget;
     public float Distance;
     public float CD;
     private float Timer;
 
     bool isAiming;
+    bool activateAim;
 
     private void Start()
     {
-        Timer = CD;
         Ballesta.transform.transform.position = aimPosition.position;
+        _normalPos = Ballesta.transform;
     }
 
     private void Update()
     {
         CheckTarget();
         
-        if (isAiming)
+        if(Input.GetKeyDown(KeyCode.Q)) 
+            activateAim = true;
+
+        if (isAiming && Timer <= CD && activateAim && Ballesta.activeSelf)
+        {
+            Timer += Time.deltaTime;
+            print(Timer);
             AutoAiminig();
+        }
+        else if(Timer > CD)
+            ResetInputs();
     
+    }
+
+    private void ResetInputs()
+    {
+        print("Entre al ResetInputs()");
+        Timer = 0;
+        isAiming = false;
+        activateAim = false;
+        transform.position = _normalPos.position;
     }
 
     public void CheckTarget()
@@ -45,6 +65,7 @@ public class AutoAim : MonoBehaviour
             }
             else
             {
+                transform.position = _normalPos.position;
                 CurrentTarget = null;
                 isAiming = false;
             }
