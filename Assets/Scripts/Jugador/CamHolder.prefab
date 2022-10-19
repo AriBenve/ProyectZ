@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 65842450423302045}
   - component: {fileID: 65842450423302044}
   - component: {fileID: 65842450423302043}
+  - component: {fileID: 1487645590147178565}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -209,6 +210,22 @@ MonoBehaviour:
   sensX: 400
   sensY: 400
   orientation: {fileID: 0}
+--- !u!114 &1487645590147178565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65842450423302047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9b906357d49284086e75bae2fa8584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ballesta: {fileID: 65842450135977428}
+  aimPosition: {fileID: 65842450423302042}
+  distance: 100
+  Timer: 10
 --- !u!1 &65842450449791671
 GameObject:
   m_ObjectHideFlags: 0
