@@ -1432,7 +1432,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18512
+  m_Name: pb_Mesh19056
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1889,7 +1889,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18714
+  m_Name: pb_Mesh19258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2689,6 +2689,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CamHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 65842450423302042, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65842450423302042, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 65842450423302043, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: sensX
       value: 200
@@ -2701,6 +2709,14 @@ PrefabInstance:
       propertyPath: orientation
       value: 
       objectReference: {fileID: 1817084835}
+    - target: {fileID: 65842450423302045, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: near clip plane
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 65842450423302045, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1207
+      objectReference: {fileID: 0}
     - target: {fileID: 4043261527797780121, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.693
@@ -2712,6 +2728,22 @@ PrefabInstance:
     - target: {fileID: 4043261527797780121, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942550148724669716, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942550148724669716, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942550148724669716, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4942550148724669716, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5810741729449880500, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: text
@@ -2751,11 +2783,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
---- !u!20 &1357279263 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 65842450423302045, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
-  m_PrefabInstance: {fileID: 1357279262}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1389316611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,7 +3187,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 1357279263}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4064,7 +4091,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18614
+  m_Name: pb_Mesh19158
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
