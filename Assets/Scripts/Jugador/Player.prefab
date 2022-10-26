@@ -162,6 +162,12 @@ MonoBehaviour:
   dashUpwardForce: 1
   maxDashYSpeed: 15
   dashDuration: 0.25
+  cam: {fileID: 0}
+  dashFov: 95
+  _fowardDashParticleSystem: {fileID: 0}
+  _backwardsDashParticleSystem: {fileID: 0}
+  _leftDashParticleSystem: {fileID: 0}
+  _rightDashParticleSystem: {fileID: 0}
   useCameraForward: 0
   allowAllDirections: 1
   disableGravity: 1
@@ -277,4 +283,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e99ca57c2b4d644393f03a22a6734a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 100
+  life: 0
