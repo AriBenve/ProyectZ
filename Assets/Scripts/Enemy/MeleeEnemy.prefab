@@ -1404,6 +1404,7 @@ GameObject:
   - component: {fileID: 9056891052439639280}
   - component: {fileID: 9056891052439639281}
   - component: {fileID: 9056891052439639278}
+  - component: {fileID: 5120845747468497447}
   - component: {fileID: 3257018322360139990}
   m_Layer: 7
   m_Name: MeleeEnemy
@@ -1522,6 +1523,19 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!114 &5120845747468497447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021108055465708198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d944011ff276b4287b4c199cb8df85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!23 &3257018322360139990
 MeshRenderer:
   m_ObjectHideFlags: 0
