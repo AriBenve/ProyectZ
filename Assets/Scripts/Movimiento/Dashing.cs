@@ -61,6 +61,7 @@ public class Dashing : MonoBehaviour
         pm.maxYspeed = maxDashYSpeed;
 
         cam.DoFov(dashFov);
+        PlayDashParticles();
 
         Transform forwardT;
 
@@ -122,7 +123,33 @@ public class Dashing : MonoBehaviour
 
     private void PlayDashParticles()
     {
-        
+        float _horizontal = Input.GetAxisRaw("Horizontal");
+        float _vertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 _inputVector = new Vector3(_horizontal, 0f, _vertical);
+
+        if(_inputVector.z > 0 && Mathf.Abs(_inputVector.x) <= _inputVector.z)
+        {
+            _fowardDashParticleSystem.Play();
+            return;
+        }
+        if (_inputVector.z < 0 && Mathf.Abs(_inputVector.x) <= Mathf.Abs(_inputVector.z))
+        {
+            _backwardsDashParticleSystem.Play();
+            return;
+        }
+        if (_inputVector.x > 0)
+        {
+            _rightDashParticleSystem.Play();
+            return;
+        }
+        if (_inputVector.x < 0)
+        {
+            _leftDashParticleSystem.Play();
+            return;
+        }
+
+        _fowardDashParticleSystem.Play();
     }
 }
 
