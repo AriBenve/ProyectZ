@@ -25,6 +25,8 @@ public class GunSystem : MonoBehaviour
     public GameObject muzzleFlash, bulletHoleGraphic;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
+    [SerializeField] private TrailRenderer BulletTrail;
+
 
     private void Awake()
     {

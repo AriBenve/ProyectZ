@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65842450135977428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69, y: 0, z: -0.07999952}
+  m_LocalPosition: {x: 1.06, y: 0, z: 0.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9057592105711747071}
@@ -64,6 +64,7 @@ MonoBehaviour:
   camShakeMagnitude: 40
   camShakeDuration: 4
   text: {fileID: 0}
+  BulletTrail: {fileID: 0}
 --- !u!1 &65842450393236411
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65842450449791671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -0.289, z: 1.417}
+  m_LocalPosition: {x: 0.665, y: -0.289, z: 1.678}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 65842450135977429}
@@ -560,11 +561,12 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
-  muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
+  muzzleFlash: {fileID: 1000010254994808, guid: 0380cc3861476d54f80e83631d55d2c8, type: 3}
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   camShakeMagnitude: 40
   camShakeDuration: 4
   text: {fileID: 0}
+  BulletTrail: {fileID: 0}
 --- !u!114 &7113600838286616864
 MonoBehaviour:
   m_ObjectHideFlags: 0
