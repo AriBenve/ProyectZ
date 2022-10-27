@@ -6,11 +6,9 @@ public class Invoke : MonoBehaviour
 {
     public Transform spawnPoint;
 
-    [SerializeField]
-    private GameObject[] enemies = new GameObject[2];
+    public GameObject[] enemies = new GameObject[2];
 
-    [SerializeField]
-    private int timeInterval;
+    public int timeInterval;
 
     private int counter = 0;
 
@@ -19,7 +17,7 @@ public class Invoke : MonoBehaviour
         StartCoroutine(spawnEnemy(timeInterval, enemies));
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject[] enemy)
+    public virtual IEnumerator spawnEnemy(float interval, GameObject[] enemy)
     {
         int i = Random.Range(0, enemy.Length);
 

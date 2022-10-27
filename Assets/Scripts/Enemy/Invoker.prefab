@@ -184,8 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4827602354517851495}
   enemies:
-  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
-  - {fileID: 6048190797141548124, guid: 19b5b198ba5c2bd4d862a3e6d041f748, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   timeInterval: 3
 --- !u!195 &6042306717099922421
 NavMeshAgent:
