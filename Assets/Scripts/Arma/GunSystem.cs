@@ -28,14 +28,22 @@ public class GunSystem : MonoBehaviour
     [SerializeField] private TrailRenderer BulletTrail;
 
 
+    [Header("Audio")]
+    public List<AudioClip> audioClipList = new List<AudioClip>();
+    public AudioSource audioSource;
+    private bool _isPlaying = false;
+
     private void Awake()
     {
         _bulletsLeft = magazineSize;
         _readyToShoot = true;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
+        _isPlaying = audioSource.isPlaying;
+
         _MyInput();
 
         text.SetText(_bulletsLeft + " / " + magazineSize);
@@ -58,6 +66,8 @@ public class GunSystem : MonoBehaviour
 
     private void Shoot()
     {
+        int i = Random.Range(0, audioClipList.Count);
+
         _readyToShoot = false;
 
         float x = Random.Range(-spread, spread);
@@ -70,6 +80,9 @@ public class GunSystem : MonoBehaviour
             if(rayHit.collider.CompareTag("Enemy"))
                 rayHit.collider.GetComponent<Enemy>().GetHit(dmg);
         }
+
+        if(!_isPlaying)
+            audioSource.PlayOneShot(audioClipList[i], 0.7f);
 
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
