@@ -3,7 +3,12 @@ guid: 77652819c44f5f34592e0ce91e0b2ff7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: suelo_a4_Tile3_01Mat
+    second: {fileID: 2100000, guid: ea9fa97a106594c478daa787c6c86376, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

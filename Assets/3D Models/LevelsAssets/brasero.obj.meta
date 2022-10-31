@@ -3,7 +3,12 @@ guid: c67c0d872fd33db47a04329f1b595ee2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brasero_Braiser_01Mat
+    second: {fileID: 2100000, guid: d3a251ec418f80141bae6c07c51e94d5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

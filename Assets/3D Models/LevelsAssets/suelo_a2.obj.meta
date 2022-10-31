@@ -3,7 +3,12 @@ guid: cc6d375d176880d45b0c2e308e9a4c76
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: suelo_a5_Tile2_01Mat
+    second: {fileID: 2100000, guid: bfcab55b98c0a6045abb1c372be5d3bc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
