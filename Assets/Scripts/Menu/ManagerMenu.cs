@@ -11,7 +11,7 @@ public class ManagerMenu : MonoBehaviour
     }
     public void EscenaJuego()
     {
-       SceneManager.LoadScene("Juego");
+       SceneManager.LoadScene("level_1");
     }
 
     public void EscenaIntegrantes()
