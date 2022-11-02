@@ -2,14 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flecha : MonoBehaviour,Idamage
+public class Flecha : MonoBehaviour
 {
     public float damage;
-
-    public void Damage(float d)
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,10 +13,7 @@ public class Flecha : MonoBehaviour,Idamage
         if (p != null)
         {
             p.Damage(damage);
-            
-
             Destroy(this.gameObject);
-
         }
        
     }

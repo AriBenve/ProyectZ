@@ -44,5 +44,13 @@ public class GunChanger : MonoBehaviour
             image.enabled = true;
             tmPro.enabled = true;
         }
+        /*else if (Input.GetKeyDown(KeyCode.Alpha3) && guns[2] != _actualGun)
+        {
+            _actualGun.SetActive(false);
+            guns[2].SetActive(true);
+            _actualGun = guns[2];
+            image.enabled = false;
+            tmPro.enabled = false;
+        }*/
     }
 }
