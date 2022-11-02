@@ -127,7 +127,7 @@ MonoBehaviour:
   moveSpeed: 0
   sprintSpeed: 20
   walkSpeed: 14
-  dashSpeed: 20
+  dashSpeed: 30
   dashSpeedChangeFactor: 50
   maxYspeed: 0
   groundDrag: 5
@@ -162,6 +162,8 @@ MonoBehaviour:
   dashUpwardForce: 1
   maxDashYSpeed: 15
   dashDuration: 0.25
+  audioClipList: []
+  audioSource: {fileID: 0}
   cam: {fileID: 0}
   dashFov: 95
   _fowardDashParticleSystem: {fileID: 0}
