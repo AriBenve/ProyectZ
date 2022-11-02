@@ -24,6 +24,7 @@ public class GunSystem : MonoBehaviour
     [Header("Graphics")]
     public GameObject muzzleFlash, bulletHoleGraphic;
     public float camShakeMagnitude, camShakeDuration;
+    public CameraShake camShake;
     public TextMeshProUGUI text;
     [SerializeField] private TrailRenderer BulletTrail;
 
@@ -31,7 +32,6 @@ public class GunSystem : MonoBehaviour
     [Header("Audio")]
     public List<AudioClip> audioClipList = new List<AudioClip>();
     public AudioSource audioSource;
-    private bool _isPlaying = false;
 
     private void Awake()
     {
@@ -42,7 +42,6 @@ public class GunSystem : MonoBehaviour
 
     private void Update()
     {
-        _isPlaying = audioSource.isPlaying;
 
         _MyInput();
 
@@ -56,9 +55,13 @@ public class GunSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && _bulletsLeft < magazineSize && !_reloading) Reload();
 
+        int i = Random.Range(0, audioClipList.Count);
+
+
         if (_readyToShoot && _shooting && !_reloading && _bulletsLeft > 0)
         {
             _bulletsShot = bulletsPerTap;
+            audioSource.PlayOneShot(audioClipList[i], 0.7f);
             Shoot();
         }
             
@@ -66,8 +69,6 @@ public class GunSystem : MonoBehaviour
 
     private void Shoot()
     {
-        int i = Random.Range(0, audioClipList.Count);
-
         _readyToShoot = false;
 
         float x = Random.Range(-spread, spread);
@@ -81,14 +82,14 @@ public class GunSystem : MonoBehaviour
                 rayHit.collider.GetComponent<Enemy>().GetHit(dmg);
         }
 
-        if(!_isPlaying)
-            audioSource.PlayOneShot(audioClipList[i], 0.7f);
-
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         _bulletsLeft--;
         _bulletsShot--;
+
+        StartCoroutine(camShake.Shake(camShakeMagnitude, camShakeDuration));
+
         Invoke("ResetShot", timeBetweenShooting);
 
         if (_bulletsShot > 0 && _bulletsShot > 0)
