@@ -1561,9 +1561,9 @@ GameObject:
   - component: {fileID: 1908025746390881204}
   - component: {fileID: 1908025746390881205}
   - component: {fileID: -4894790395571909617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EvokerEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
