@@ -8,6 +8,7 @@ public class AgentEnemy : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform player;
     public GameObject projectile;
+    private Animator _evokerAnimator;
 
     public LayerMask FloorMask, PlayerMask;
 
@@ -21,6 +22,7 @@ public class AgentEnemy : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
+        _evokerAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -28,14 +30,20 @@ public class AgentEnemy : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, PlayerMask);
         
         enemy.SetDestination(player.position);
+
+        _evokerAnimator.SetFloat("Speed", enemy.velocity.magnitude);
         
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, PlayerMask);
 
         if (playerInSightRange && playerInAttackRange)
         {
             AttackPlayer();
+            _evokerAnimator.SetBool("Attacking", true);
         }
-
+        else
+        {
+            _evokerAnimator.SetBool("Attacking", false);
+        }
     }
 
     
