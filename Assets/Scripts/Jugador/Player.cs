@@ -29,6 +29,6 @@ public class Player : MonoBehaviour,Idamage
     public void Death()
     {
         Debug.Log("Me fulminaron wachin que carajo hiciste pedazo de aweonado");
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("level_1");
     }
 }

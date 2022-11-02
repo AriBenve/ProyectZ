@@ -16,6 +16,10 @@ public class Dashing : MonoBehaviour
     public float maxDashYSpeed;
     public float dashDuration;
 
+    [Header("Audio")]
+    public List<AudioClip> audioClipList = new List<AudioClip>();
+    public AudioSource audioSource;
+
     [Header("CameraEffects")]
     public PlayerCam cam;
     public float dashFov;
@@ -46,7 +50,12 @@ public class Dashing : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(dashKey))
+        {
+            int i = Random.Range(0, audioClipList.Count);
+            audioSource.PlayOneShot(audioClipList[i], 0.7f);
             Dash();
+        }
+            
 
         if (dashCdTimer > 0)
             dashCdTimer -= Time.deltaTime;

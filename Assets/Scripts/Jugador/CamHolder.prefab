@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067efaae9e23f1b4a8cf9ac91cf88627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 20
-  timeBetweenShooting: 0.05
+  dmg: 30
+  timeBetweenShooting: 0.12
   spread: 0.02
   range: 100
   reloadTime: 0.02
@@ -64,6 +64,7 @@ MonoBehaviour:
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   camShakeMagnitude: 40
   camShakeDuration: 4
+  camShake: {fileID: 0}
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
@@ -734,7 +735,7 @@ MonoBehaviour:
   timeBetweenShots: 0
   magazineSize: 320
   bulletsPerTap: 6
-  allowButtonHold: 0
+  allowButtonHold: 1
   fpsCam: {fileID: 65842450423302045}
   attackPoint: {fileID: 4043261527797780121}
   whatIsEnemy:
@@ -742,8 +743,9 @@ MonoBehaviour:
     m_Bits: 128
   muzzleFlash: {fileID: 1000010254994808, guid: 0380cc3861476d54f80e83631d55d2c8, type: 3}
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
-  camShakeMagnitude: 40
-  camShakeDuration: 4
+  camShakeMagnitude: 0.07
+  camShakeDuration: 0.2
+  camShake: {fileID: 0}
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
