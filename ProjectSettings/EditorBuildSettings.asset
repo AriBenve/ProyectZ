@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: "Assets/Scenes/ParcialProgramaci\xF3n/Controles.unity"
     guid: 36b20065a57757e409436ba76284ff33
   - enabled: 1
-    path: "Assets/Scenes/ParcialProgramaci\xF3n/Juego.unity"
-    guid: b5595f6d2bb6291499726887d9c3a932
+    path: Assets/Scenes/level 1/level_1.unity
+    guid: 4e8523935858ace49a49eded1fc9281c
   m_configObjects: {}
