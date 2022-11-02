@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6048190797141548121}
   - component: {fileID: 6048190797141548120}
   - component: {fileID: 6048190797141548127}
-  - component: {fileID: 6048190797141548126}
   - component: {fileID: 6048190797141548123}
   - component: {fileID: 6048190797141548125}
+  - component: {fileID: -2269110433312683779}
   m_Layer: 7
   m_Name: Range
   m_TagString: Enemy
@@ -99,32 +99,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6048190797141548126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6048190797141548124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd8d8fa30a59b14b9a5df191bd478f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 6048190797141548125}
-  player: {fileID: 0}
-  projectile: {fileID: 7361596749394441914, guid: bd0c2a34473af22478ce37227d3904fe, type: 3}
-  FloorMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  PlayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  timeBetweenAttacks: 2
-  sightRange: 20
-  attackRange: 12
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!114 &6048190797141548123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +134,29 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2269110433312683779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048190797141548124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c43d1d0bc7eb948b90bf19f80996f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6048190797141548125}
+  player: {fileID: 0}
+  projectile: {fileID: 7361596749394441914, guid: bd0c2a34473af22478ce37227d3904fe, type: 3}
+  FloorMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  timeBetweenAttacks: 2
+  sightRange: 20
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
