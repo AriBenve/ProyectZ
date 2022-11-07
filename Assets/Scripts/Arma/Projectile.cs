@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [Header("Stats")]
-    public int damage;
+    public float damage;
     public bool destroyOnHit;
 
     [Header("Effects")]
