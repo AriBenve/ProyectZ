@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool _grounded;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float MaxSlopeAngle;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        _grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
         _MyInput();
         _SpeedControl();
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(jumpKey) && _readyToJump && _grounded)
+        if(Input.GetKey(jumpKey) && _readyToJump && grounded)
         {
             _readyToJump = false;
 
@@ -105,12 +105,12 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.dashing;
             _desiredMoveSpeed = dashSpeed;
         }
-        else if(_grounded && Input.GetKey(sprintKey))
+        else if(grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
             _desiredMoveSpeed = sprintSpeed;
         }
-        else if(_grounded)
+        else if(grounded)
         {
             state = MovementState.walking;
             _desiredMoveSpeed = walkSpeed;
@@ -190,10 +190,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         //Ground Drag
-        if(_grounded)
+        if(grounded)
             _rb.AddForce(_moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         //In Air
-        else if(!_grounded)
+        else if(!grounded)
             _rb.AddForce(_moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
         
         //Turn gravity off while on a slope

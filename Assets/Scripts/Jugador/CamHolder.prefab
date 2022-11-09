@@ -754,7 +754,7 @@ MonoBehaviour:
   timeBetweenShots: 0
   magazineSize: 320
   bulletsPerTap: 6
-  allowButtonHold: 1
+  allowButtonHold: 0
   fpsCam: {fileID: 65842450423302045}
   attackPoint: {fileID: 4043261527797780121}
   whatIsEnemy:

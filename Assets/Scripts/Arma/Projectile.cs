@@ -8,6 +8,10 @@ public class Projectile : MonoBehaviour
     public float damage;
     public bool destroyOnHit;
 
+    [Header("Camera Shake")]
+    public float camShakeMagnitude, camShakeDuration;
+    public CameraShake camShake;
+
     [Header("Effects")]
     public GameObject muzzleEffect;
     public GameObject hitEffect;
@@ -27,6 +31,8 @@ public class Projectile : MonoBehaviour
     {
         // get rigidbody component
         rb = GetComponent<Rigidbody>();
+
+        camShake = FindObjectOfType<CameraShake>();
 
         // spawn muzzleEffect (if assigned)
         if(muzzleEffect != null)
@@ -73,6 +79,8 @@ public class Projectile : MonoBehaviour
 
     private void Explode()
     {
+        camShake.Shake(camShakeMagnitude, camShakeDuration);
+
         // spawn explosion effect (if assigned)
         if (explosionEffect != null)
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
@@ -111,7 +119,7 @@ public class Projectile : MonoBehaviour
         }
 
         // destroy projectile with 0.1 seconds delay
-        Invoke(nameof(DestroyProjectile), 0.1f);
+        Invoke(nameof(DestroyProjectile), 0.5f);
     }
 
     private void DestroyProjectile()
