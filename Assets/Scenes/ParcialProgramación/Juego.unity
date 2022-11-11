@@ -817,50 +817,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3530945778018293925, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
   m_PrefabInstance: {fileID: 1357279262}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &270417051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4852966410527050944, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-  m_PrefabInstance: {fileID: 1817084833}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &270417054 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4852966410527050949, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-  m_PrefabInstance: {fileID: 1817084833}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270417051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17e667f3b8234a4ebab65de85923be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &270417055 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4852966410527050951, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-  m_PrefabInstance: {fileID: 1817084833}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &270417056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270417051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e757471b9d3a1994dbae2c9834ce034a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 1817084835}
-  rb: {fileID: 270417055}
-  whatIsWall:
-    serializedVersion: 2
-    m_Bits: 2048
-  pm: {fileID: 270417054}
-  climbSpeed: 10
-  maxClimbTime: 0.75
-  detectionLength: 0.7
-  sphereCastRadius: 0.25
-  maxWallAngle: 30
 --- !u!1001 &303892279
 PrefabInstance:
   m_ObjectHideFlags: 0
