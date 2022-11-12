@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     public void GetHit(float dmg)
     {
         _life -= dmg;
-
+        
         if (_getHitFeedback_Cor != null)
         {
             StopCoroutine(_getHitFeedback_Cor);
@@ -35,10 +35,13 @@ public class Enemy : MonoBehaviour
 
         if (_life <= 0)
         {
-            Death();
+            ManagerEnemy.instance.Kill();
+            Destroy(gameObject);
+            //Death();
         }
         else
         {
+            
             _getHitFeedback_Cor = StartCoroutine(GetHitFeedback());
         }
     }
@@ -47,9 +50,9 @@ public class Enemy : MonoBehaviour
     {
         //_enemyAnimator.SetBool("Dying", true);
         StartCoroutine(ReduceToDeath());
+        
 
-        
-        
+
     }
 
     IEnumerator GetHitFeedback()
@@ -91,6 +94,7 @@ public class Enemy : MonoBehaviour
 
             yield return null;
         }
+        
         //_enemyAnimator.SetBool("Dying", false);
         Destroy(this.gameObject);
     }

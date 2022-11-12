@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 9056891052439639280}
   - component: {fileID: 9056891052439639281}
   - component: {fileID: 9056891052439639278}
-  - component: {fileID: 5120845747468497447}
+  - component: {fileID: -6110596954408032375}
   - component: {fileID: 3257018322360139990}
   m_Layer: 7
   m_Name: MeleeEnemy
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!114 &5120845747468497447
+--- !u!114 &-6110596954408032375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1532,10 +1532,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6021108055465708198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d944011ff276b4287b4c199cb8df85, type: 3}
+  m_Script: {fileID: 11500000, guid: bbd8d8fa30a59b14b9a5df191bd478f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  enemy: {fileID: 0}
+  player: {fileID: 0}
+  projectile: {fileID: 0}
+  FloorMask:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  timeBetweenAttacks: 0
+  sightRange: 0
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!23 &3257018322360139990
 MeshRenderer:
   m_ObjectHideFlags: 0
