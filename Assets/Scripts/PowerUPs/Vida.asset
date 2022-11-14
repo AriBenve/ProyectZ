@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af9bd73479167c44a3c959253e9da2c, type: 3}
   m_Name: Vida
   m_EditorClassIdentifier: 
-  amount: 0
+  amount: 30

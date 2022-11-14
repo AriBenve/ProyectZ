@@ -8,7 +8,12 @@ public class PU : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Destroy(gameObject);
-        powerUps.Apply(collision.gameObject);
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            powerUps.Apply(collision.gameObject);
+        }
+        
+
     }
 }
