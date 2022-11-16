@@ -8,7 +8,7 @@ public class PU_Health : PowerUps
     public int amount;
     public override void Apply(GameObject player)
     {
-        player.GetComponent<Player>().life += amount;
+        player.GetComponent<Player>().Heal(amount);
         Debug.Log("sumarvida");
     }
 }

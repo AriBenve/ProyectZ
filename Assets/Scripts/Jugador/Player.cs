@@ -5,26 +5,59 @@ using UnityEngine;
 
 public class Player : MonoBehaviour,Idamage
 {
-    public float life;
+    [Header("Floats")]
+    public float _life;
+    public float maxLife;
+
+    [Header("Bools")]
+    private bool running;
 
     private void Start()
     {
-        life = 100;
+        _life = maxLife;
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if(_life > maxLife)
+    //    {
+    //        float amount = _life - maxLife;
+    //        StartCoroutine(GraduallyReduceHP(amount, 5f));
+    //    }
+    //}
+
+    public void Damage(float d)
     {
-        if(life <= 0)
+        _life -= d;
+        Debug.Log(_life);
+
+        if (_life <= 0)
         {
             Death();
         }
     }
 
-    public void Damage(float d)
+    public void Heal(float amount)
     {
-        life -= d;
-        Debug.Log(life);
+        _life += amount;
     }
+
+    //IEnumerator GraduallyReduceHP(float damage, float rate)
+    //{
+    //    while (damage > 0)
+    //    {
+    //        float delta = rate * Time.deltaTime;
+
+    //        if(delta > damage)
+    //        {
+    //            _life -= damage;
+    //            break;
+    //        }
+    //        _life -= delta;
+    //        damage -= delta;
+    //        yield return null;
+    //    }
+    //}
 
     public void Death()
     {

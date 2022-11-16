@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        currentHealth = player.life;
+        currentHealth = player._life;
 
         HPBar.fillAmount = currentHealth / maxHealth;
     }
