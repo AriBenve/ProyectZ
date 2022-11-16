@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[RequireComponent(typeof(Animator))]
-public class Enemy : MonoBehaviour
+
+public abstract class Enemy : MonoBehaviour
 {
 
     [SerializeField] float _life;
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     Coroutine _getHitFeedback_Cor;
 
-    //Animator _enemyAnimator;
+    
 
     private void Start()
     {
@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour
         if (_life <= 0)
         {
             ManagerEnemy.instance.Kill();
-            Destroy(gameObject);
-            //Death();
+            
+            Death();
         }
         else
         {
@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        //_enemyAnimator.SetBool("Dying", true);
+        
         StartCoroutine(ReduceToDeath());
         
 
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
         
-        //_enemyAnimator.SetBool("Dying", false);
+        
         Destroy(this.gameObject);
     }
 }
