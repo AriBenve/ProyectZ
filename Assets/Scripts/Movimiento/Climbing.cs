@@ -54,7 +54,12 @@ public class Climbing : MonoBehaviour
         _wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out _frontWallHit, detectionLength, whatIsWall);
         _wallLookAngle = Vector3.Angle(orientation.forward, -_frontWallHit.normal);
 
-        if(pm.grounded) _climbTimer = maxClimbTime;
+        if(pm.grounded)
+        {
+            _climbTimer = maxClimbTime;
+
+        }
+        
     }
 
     private void StartClimbing()

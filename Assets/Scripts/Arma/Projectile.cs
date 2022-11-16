@@ -23,12 +23,18 @@ public class Projectile : MonoBehaviour
     public int explosionDamage;
     public GameObject explosionEffect;
 
+    [Header("Audio")]
+    public List<AudioClip> audioClipList = new List<AudioClip>();
+    private AudioSource audioSource;
+
     private Rigidbody rb;
 
     private bool hitTarget;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         // get rigidbody component
         rb = GetComponent<Rigidbody>();
 
@@ -79,7 +85,10 @@ public class Projectile : MonoBehaviour
 
     private void Explode()
     {
-        camShake.Shake(camShakeMagnitude, camShakeDuration);
+        int z = Random.Range(0, audioClipList.Count);
+        audioSource.PlayOneShot(audioClipList[z], 0.7f);
+
+        StartCoroutine(camShake.Shake(camShakeMagnitude, camShakeDuration));
 
         // spawn explosion effect (if assigned)
         if (explosionEffect != null)
@@ -119,7 +128,7 @@ public class Projectile : MonoBehaviour
         }
 
         // destroy projectile with 0.1 seconds delay
-        Invoke(nameof(DestroyProjectile), 0.5f);
+        Invoke(nameof(DestroyProjectile), 5f);
     }
 
     private void DestroyProjectile()
