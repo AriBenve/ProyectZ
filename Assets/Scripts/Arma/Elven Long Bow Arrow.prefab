@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 200
   destroyOnHit: 0
-  camShakeMagnitude: 1
+  camShakeMagnitude: 0.5
   camShakeDuration: 0.3
   camShake: {fileID: 0}
   muzzleEffect: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
@@ -102,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.57
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -146,7 +146,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

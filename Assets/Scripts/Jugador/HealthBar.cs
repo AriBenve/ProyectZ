@@ -7,13 +7,14 @@ public class HealthBar : MonoBehaviour
 {
     private Image HPBar;
     public float currentHealth;
-    private float maxHealth = 100f;
+    private float maxHealth;
     Player player;
 
     private void Awake()
     {
         HPBar = GetComponent<Image>();
         player = FindObjectOfType<Player>();
+        maxHealth = player.maxLife;
     }
 
     private void Update()
