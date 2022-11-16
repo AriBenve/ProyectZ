@@ -62,9 +62,9 @@ MonoBehaviour:
     m_Bits: 128
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
-  camShakeMagnitude: 40
-  camShakeDuration: 4
-  camShake: {fileID: 0}
+  camShakeMagnitude: 0.035
+  camShakeDuration: 0.1
+  camShake: {fileID: 2870544217361082544}
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 65842450423302045}
   - component: {fileID: 65842450423302044}
   - component: {fileID: 65842450423302043}
-  - component: {fileID: 6421575412667586396}
   - component: {fileID: 2870544217361082544}
   m_Layer: 0
   m_Name: Main Camera
@@ -316,22 +315,6 @@ MonoBehaviour:
   sensX: 200
   sensY: 200
   orientation: {fileID: 0}
---- !u!114 &6421575412667586396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65842450423302047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9b906357d49284086e75bae2fa8584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ballesta: {fileID: 65842450135977428}
-  aimPosition: {fileID: 65842450423302042}
-  Distance: 10
-  CD: 10
 --- !u!114 &2870544217361082544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8752531171653608418}
+  - component: {fileID: 5995470167845151125}
   m_Layer: 15
   m_Name: Espada
   m_TagString: Untagged
@@ -645,6 +629,19 @@ Transform:
   m_Father: {fileID: 309189414004511626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5995470167845151125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5199911387658463435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2808342, y: 1.4861802, z: 1}
+  m_Center: {x: 1.1847785, y: 0.2430901, z: 0}
 --- !u!1 &6525404870091974051
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +694,7 @@ MonoBehaviour:
   totalThrows: 10
   throwCooldown: 1
   throwKey: 323
-  throwForce: 30
+  throwForce: 100
   throwUpwardForce: 0
 --- !u!1 &8009773749445747531
 GameObject:
@@ -762,9 +759,9 @@ MonoBehaviour:
     m_Bits: 128
   muzzleFlash: {fileID: 1000010254994808, guid: 0380cc3861476d54f80e83631d55d2c8, type: 3}
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
-  camShakeMagnitude: 0.05
-  camShakeDuration: 0.2
-  camShake: {fileID: 0}
+  camShakeMagnitude: 0.1
+  camShakeDuration: 0.1
+  camShake: {fileID: 2870544217361082544}
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
@@ -1209,14 +1206,14 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6d9c6e65c5e555f458a5f880c854ff9f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f345d7da5160e14ea7e8956fab1588d, type: 3}
---- !u!1 &7185811085356843600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f345d7da5160e14ea7e8956fab1588d, type: 3}
-  m_PrefabInstance: {fileID: 8032249984106594049}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7562372465602730218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f345d7da5160e14ea7e8956fab1588d, type: 3}
+  m_PrefabInstance: {fileID: 8032249984106594049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7185811085356843600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5f345d7da5160e14ea7e8956fab1588d, type: 3}
   m_PrefabInstance: {fileID: 8032249984106594049}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &5585323717754672479
