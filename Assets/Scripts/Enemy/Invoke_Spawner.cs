@@ -30,11 +30,11 @@ public class Invoke_Spawner : Invoke
             {
                 GameObject newEnemy = Instantiate(enemy[0], spawnPoints[j].position, Quaternion.identity);
             }
-            else if (i <= 99 && i > 50)
+            else if (i <= 94 && i > 50)
             {
                 GameObject newEnemy = Instantiate(enemy[1], spawnPoints[j].position, Quaternion.identity);
             }
-            else if (i > 99)
+            else if (i > 94)
             {
                 GameObject newEnemy = Instantiate(enemy[2], spawnPoints[j].position, Quaternion.identity);
             }

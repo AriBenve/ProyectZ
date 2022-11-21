@@ -132,9 +132,9 @@ MonoBehaviour:
   dashSpeedChangeFactor: 50
   maxYspeed: 0
   groundDrag: 5
-  jumpForce: 24
+  jumpForce: 18
   jumpCooldown: 0.25
-  airMultiplier: 0.4
+  airMultiplier: 0.7
   jumpKey: 32
   sprintKey: 304
   playerHeight: 2
