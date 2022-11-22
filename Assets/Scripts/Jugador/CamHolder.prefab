@@ -407,7 +407,7 @@ MonoBehaviour:
   guns:
   - {fileID: 65842450135977428}
   - {fileID: 8009773749445747531}
-  - {fileID: 0}
+  - {fileID: 6525404870091974051}
   - {fileID: 0}
   image: {fileID: 0}
   tmPro: {fileID: 0}

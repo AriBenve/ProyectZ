@@ -9,14 +9,14 @@ public class GunChanger : MonoBehaviour
     public GameObject[] guns = new GameObject[4];
     GameObject _actualGun;
 
-    public Image image;
-    public TextMeshProUGUI tmPro;
+    public Image imageShotgunMode;
+    public TextMeshProUGUI tmProShotgunMode;
 
     private void Start()
     {
         _actualGun = guns[0];
-        image.enabled = false;
-        tmPro.enabled = false;
+        imageShotgunMode.enabled = false;
+        tmProShotgunMode.enabled = false;
     }
 
     private void Update()
@@ -32,8 +32,8 @@ public class GunChanger : MonoBehaviour
             _actualGun.SetActive(false);
             guns[0].SetActive(true);
             _actualGun = guns[0];
-            image.enabled = false;
-            tmPro.enabled = false;
+            imageShotgunMode.enabled = false;
+            tmProShotgunMode.enabled = false;
         }
         //Escopeta
         else if(Input.GetKeyDown(KeyCode.Alpha2) && guns[1] != _actualGun)
@@ -41,8 +41,8 @@ public class GunChanger : MonoBehaviour
             _actualGun.SetActive(false);
             guns[1].SetActive(true);
             _actualGun = guns[1];
-            image.enabled = true;
-            tmPro.enabled = true;
+            imageShotgunMode.enabled = true;
+            tmProShotgunMode.enabled = true;
         }
         //Arco
         else if (Input.GetKeyDown(KeyCode.Alpha3) && guns[2] != _actualGun)
@@ -50,8 +50,8 @@ public class GunChanger : MonoBehaviour
             _actualGun.SetActive(false);
             guns[2].SetActive(true);
             _actualGun = guns[2];
-            image.enabled = false;
-            tmPro.enabled = false;
+            imageShotgunMode.enabled = false;
+            tmProShotgunMode.enabled = false;
         }
     }
 }
