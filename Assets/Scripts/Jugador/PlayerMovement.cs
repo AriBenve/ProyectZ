@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         if (state == MovementState.walking || state == MovementState.sprinting)
             _rb.drag = groundDrag;
         else
-            _rb.drag = 0;
+            _rb.drag = 0f;
     }
 
     private void FixedUpdate()
