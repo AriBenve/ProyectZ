@@ -27,8 +27,12 @@ public class BloodEffect : MonoBehaviour
     
     void Update()
     {
-        
 
+        if (Input.GetKey(KeyCode.F))
+        {
+            a += 0.01f;
+        }
+        a -=0.001f;
 
         a = Mathf.Clamp(a, 0, 1f);
 
