@@ -13,16 +13,9 @@ public class Player : MonoBehaviour,Idamage
     [Header("Bools")]
     private bool running;
 
-
-    public Image bloodEffectImage;
-
-    private float a;
-
     private void Start()
     {
         _life = maxLife;
-
-        a = bloodEffectImage.color.a;
     }
 
     //private void Update()
@@ -38,14 +31,6 @@ public class Player : MonoBehaviour,Idamage
     {
         _life -= d;
         Debug.Log(_life);
-
-        if (_life == d)
-        {
-            a += 0.01f;
-        }
-        a -= 0.001f;
-
-        a = Mathf.Clamp(a, 0, 1f);
 
         if (_life <= 0)
         {
