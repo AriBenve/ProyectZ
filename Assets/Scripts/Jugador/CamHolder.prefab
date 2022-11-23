@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65842450135977428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.06, y: 0, z: 0.48}
+  m_LocalPosition: {x: -0.194, y: 0, z: -0.054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9057592105711747071}
@@ -68,9 +68,7 @@ MonoBehaviour:
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
-  - {fileID: 8300000, guid: 470976fbaa57c6f4f856640b663f979e, type: 3}
-  - {fileID: 8300000, guid: a42c7c008617ecd48bc34838fce1dac0, type: 3}
-  - {fileID: 8300000, guid: 36746a6965a387f42b65e587a231efd9, type: 3}
+  - {fileID: 8300000, guid: 296d8d1656ed8dc4399743ccd51a44ac, type: 3}
   audioSource: {fileID: 6473900609502890674}
 --- !u!82 &6473900609502890674
 AudioSource:
@@ -409,8 +407,8 @@ MonoBehaviour:
   - {fileID: 8009773749445747531}
   - {fileID: 6525404870091974051}
   - {fileID: 0}
-  image: {fileID: 0}
-  tmPro: {fileID: 0}
+  imageShotgunMode: {fileID: 0}
+  tmProShotgunMode: {fileID: 0}
 --- !u!1 &3532338505808904349
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,9 +972,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1054716762027761820, guid: 00dc1463e33bd174aa362cbb182b4124, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07d76f5c309bb2e4794141767f0ac45c, type: 2}
     - target: {fileID: 919132149155446097, guid: 00dc1463e33bd174aa362cbb182b4124, type: 3}
       propertyPath: m_Name
       value: escopeta de combate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792171842405673144, guid: 00dc1463e33bd174aa362cbb182b4124, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00dc1463e33bd174aa362cbb182b4124, type: 3}
