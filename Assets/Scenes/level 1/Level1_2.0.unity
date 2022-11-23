@@ -2314,7 +2314,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57782
+  m_Name: pb_Mesh109364
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3142,7 +3142,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57892
+  m_Name: pb_Mesh109482
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6334,6 +6334,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1556642938}
     - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
+      propertyPath: dashCd
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
+      propertyPath: resetVel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1556642939}
@@ -8933,6 +8941,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65842450423302043, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: cameraPos
+      value: 
+      objectReference: {fileID: 1052311227}
+    - target: {fileID: 65842450423302043, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: orientation
       value: 
       objectReference: {fileID: 1052311226}
@@ -10915,7 +10927,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57808
+  m_Name: pb_Mesh109394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

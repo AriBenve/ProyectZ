@@ -1707,7 +1707,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1908025747517460986}
   enemies:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
-  - {fileID: 6048190797141548124, guid: 19b5b198ba5c2bd4d862a3e6d041f748, type: 3}
+  - {fileID: 2594308401758562256, guid: b8c829a66732f4d49a70802cf75416ff, type: 3}
   timeInterval: 3
 --- !u!114 &4986235177131356695
 MonoBehaviour:

@@ -51,8 +51,7 @@ public class Dashing : MonoBehaviour
     {
         if (Input.GetKeyDown(dashKey))
         {
-            int i = Random.Range(0, audioClipList.Count);
-            audioSource.PlayOneShot(audioClipList[i], 0.7f);
+            
             Dash();
         }
             
@@ -69,6 +68,8 @@ public class Dashing : MonoBehaviour
         pm.dashing = true;
         pm.maxYspeed = maxDashYSpeed;
 
+        int i = Random.Range(0, audioClipList.Count);
+        audioSource.PlayOneShot(audioClipList[i], 0.7f);
         cam.DoFov(dashFov);
         PlayDashParticles();
 

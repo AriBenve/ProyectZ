@@ -174,11 +174,11 @@ MonoBehaviour:
   _backwardsDashParticleSystem: {fileID: 0}
   _leftDashParticleSystem: {fileID: 0}
   _rightDashParticleSystem: {fileID: 0}
-  useCameraForward: 0
+  useCameraForward: 1
   allowAllDirections: 1
-  disableGravity: 1
+  disableGravity: 0
   resetVel: 1
-  dashCd: 0.75
+  dashCd: 1.75
   dashKey: 101
 --- !u!114 &5575690455783657244
 MonoBehaviour:
