@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ManagerMenu : MonoBehaviour
 {
+    private void Update()
+    {
+        Pasardelevel();
+    }
     public void EscenaOpciones()
     {
        SceneManager.LoadScene("Controles");
@@ -22,6 +26,14 @@ public class ManagerMenu : MonoBehaviour
     public void EscenaMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Pasardelevel()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("Level1_2.0");
+        }
     }
 
     public void Exit()
