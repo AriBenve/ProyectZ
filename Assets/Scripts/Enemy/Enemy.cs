@@ -6,7 +6,9 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
 
-    [SerializeField] float _life;
+    public float _life;
+
+    public float maxLife;
 
     Material _myMaterial;
 
@@ -18,6 +20,8 @@ public abstract class Enemy : MonoBehaviour
 
     private void Start()
     {
+
+        _life = maxLife;
 
         _myMaterial = GetComponent<Renderer>().material;
 

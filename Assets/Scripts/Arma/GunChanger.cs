@@ -53,5 +53,13 @@ public class GunChanger : MonoBehaviour
             imageShotgunMode.enabled = false;
             tmProShotgunMode.enabled = false;
         }
+        else if(Input.GetKeyDown(KeyCode.C) && guns[3] != _actualGun)
+        {
+            _actualGun.SetActive(false);
+            guns[3].SetActive(true);
+            _actualGun = guns[3];
+            imageShotgunMode.enabled = false;
+            tmProShotgunMode.enabled = false;
+        }
     }
 }
