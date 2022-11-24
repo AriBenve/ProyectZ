@@ -189,6 +189,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &388585639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8009773749445747531, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+  m_PrefabInstance: {fileID: 1764266856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &388585640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388585639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &534161652
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +481,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &874956516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5199911387658463435, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+  m_PrefabInstance: {fileID: 1764266856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &874956520
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874956516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e349633e197d094fb95185fbfdcd98a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1125309455
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125309456}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: tornado de arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,7 +863,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -868,7 +916,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -922,7 +970,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7075472, g: 0.6616343, b: 0.5039605, a: 1}
+      maxColor: {r: 0.754717, g: 0.71881026, b: 0.52331793, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1360,14 +1408,14 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 15.5
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 2, y: 2, z: 2}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1446,7 +1494,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.61
       mode: 0
       spread: 0
       speed:
@@ -5787,7 +5835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _life: 100
   maxLife: 100
-  bloodEffectImage: {fileID: 618296457}
 --- !u!1001 &1764266856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5795,6 +5842,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 65842450135977428, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 65842450393236408, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: cameraPosition
       value: 
@@ -5881,13 +5932,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2247741523444208787, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733957211464975858, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5311259940243226887, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6193692267640609278, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: attackKey
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009773749445747531, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5585323717754672479, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
 --- !u!1 &1768927903
 GameObject:
@@ -6139,7 +6203,7 @@ ParticleSystemRenderer:
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
-  m_AllowRoll: 1
+  m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
@@ -6284,7 +6348,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6338,7 +6402,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7075472, g: 0.6616343, b: 0.5039605, a: 1}
+      maxColor: {r: 0.6037736, g: 0.56507444, b: 0.42435032, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6400,7 +6464,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6776,7 +6840,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 32.48
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -10290,7 +10354,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   CustomDataModule:
     enabled: 0
-    mode0: 0
+    mode0: 2
     vectorComponentCount0: 4
     color0:
       serializedVersion: 2
