@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ballesta
+  - SueloArena
+  - SueloPiedra
   layers:
   - Default
   - TransparentFX
