@@ -26,9 +26,11 @@ public class Player : MonoBehaviour,Idamage
     //        StartCoroutine(GraduallyReduceHP(amount, 5f));
     //    }
     //}
+    
 
     public void Damage(float d)
     {
+
         _life -= d;
         Debug.Log(_life);
 

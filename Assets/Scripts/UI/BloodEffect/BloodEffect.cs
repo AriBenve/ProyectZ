@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BloodEffect : MonoBehaviour
 {
+
+
     public Player player;
 
     public Image bloodEffectImage;
@@ -24,19 +26,10 @@ public class BloodEffect : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    
+
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.F))
-        {
-            a += 0.01f;
-        }
-        a -=0.001f;
-
-        a = Mathf.Clamp(a, 0, 1f);
-
-        ChangerColor();
+        DamageFitBack();
     }
 
     private void ChangerColor()
@@ -44,4 +37,18 @@ public class BloodEffect : MonoBehaviour
         Color c = new Color(r, g, b, a);
         bloodEffectImage.color = c;
     }
+
+    private void DamageFitBack()
+    {
+        if (Input.GetKey(KeyCode.F))
+        {
+            a += 0.01f;
+        }
+        a -= 0.001f;
+
+        a = Mathf.Clamp(a, 0, 1f);
+
+        ChangerColor();
+    }
+
 }
