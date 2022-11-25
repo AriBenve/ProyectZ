@@ -25,7 +25,7 @@ public class ManagerMenu : MonoBehaviour
 
     public void EscenaMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("PruebaMenu");
     }
 
     public void Pasardelevel()
