@@ -779,7 +779,6 @@ MonoBehaviour:
   text: {fileID: 0}
   BulletTrail: {fileID: 0}
   audioClipList:
-  - {fileID: 8300000, guid: 34bfce2a18031db438b3b19e94f00598, type: 3}
   - {fileID: 8300000, guid: 1d230b4a622a8674fa2a2d64aad0546c, type: 3}
   audioSource: {fileID: 4002712347628061644}
 --- !u!114 &7113600838286616864
