@@ -52,9 +52,10 @@ MonoBehaviour:
   range: 100
   reloadTime: 0.02
   timeBetweenShots: 0
-  magazineSize: 640
+  magazineSize: 120
   bulletsPerTap: 1
   allowButtonHold: 1
+  _animator: {fileID: 0}
   fpsCam: {fileID: 65842450423302045}
   attackPoint: {fileID: 65842450449791668}
   whatIsEnemy:
@@ -705,7 +706,7 @@ MonoBehaviour:
   attackPoint: {fileID: 975842822157279751}
   objectToThrow: {fileID: 5266019483243121188, guid: 285f2393fba07264e8e1e743f040e24d, type: 3}
   text_info: {fileID: 0}
-  totalThrows: 10
+  totalThrows: 3
   throwCooldown: 1
   throwKey: 323
   throwForce: 100
@@ -763,9 +764,10 @@ MonoBehaviour:
   range: 100
   reloadTime: 0.02
   timeBetweenShots: 0
-  magazineSize: 320
+  magazineSize: 64
   bulletsPerTap: 6
   allowButtonHold: 0
+  _animator: {fileID: 0}
   fpsCam: {fileID: 65842450423302045}
   attackPoint: {fileID: 4043261527797780121}
   whatIsEnemy:
