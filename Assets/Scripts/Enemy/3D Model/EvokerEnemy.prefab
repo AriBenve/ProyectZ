@@ -1576,7 +1576,7 @@ Transform:
   m_GameObject: {fileID: 4597166239615529459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.6049356, y: 1.1892214, z: -20.59}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8707683726069173213}
   - {fileID: 1611767166116812817}
@@ -1721,8 +1721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0d57bc21528b149a5de0e204dbc3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 100
-  maxLife: 0
+  _life: 300
+  maxLife: 300
+  _sandtornado: {fileID: 7709228047644642270, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
   enemy: {fileID: 1908025746390881202}
   player: {fileID: 4852966410527050950, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
   projectile: {fileID: 7361596749394441914, guid: bd0c2a34473af22478ce37227d3904fe, type: 3}

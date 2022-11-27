@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Invoke_Spawner : Invoke
+public class Invoke_Spawner : MonoBehaviour
 {
     public List<Transform> spawnPoints = new List<Transform>();
-    //public List<GameObject> Enemies = new List<GameObject>();
+    public List<GameObject> Enemies = new List<GameObject>();
     int count = 0;
     bool CR_Running = false;
+    public float timeInterval;
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if(!CR_Running)
-        StartCoroutine(spawnEnemy(timeInterval, enemies));
+        StartCoroutine(spawnEnemy(timeInterval, Enemies));
     }
 
-    public override IEnumerator spawnEnemy(float interval, GameObject[] enemy)
+    public IEnumerator spawnEnemy(float interval, List<GameObject> enemy)
     {
 
 
@@ -43,7 +45,7 @@ public class Invoke_Spawner : Invoke
         }
 
 
-        StartCoroutine(spawnEnemy(timeInterval, enemies));
+        StartCoroutine(spawnEnemy(timeInterval, Enemies));
     }
 
     /*private int EnemyCount()

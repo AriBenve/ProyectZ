@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003004, b: 0.33566722, a: 1}
+  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003007, b: 0.3356672, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2742,15 +2742,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 841302800}
-  enemies:
+  spawnPoints:
+  - {fileID: 841302800}
+  - {fileID: 1608332138}
+  Enemies:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 5
-  spawnPoints:
-  - {fileID: 841302800}
-  - {fileID: 1608332138}
 --- !u!65 &153917210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4605,17 +4604,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 853337928}
-  enemies:
-  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
-  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
-  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
-  timeInterval: 5
   spawnPoints:
   - {fileID: 853337928}
   - {fileID: 205751240}
   - {fileID: 2068852599}
   - {fileID: 1692172048}
+  Enemies:
+  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
+  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
+  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  timeInterval: 5
 --- !u!4 &256460906
 Transform:
   m_ObjectHideFlags: 0
@@ -5944,7 +5942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 0
+  minKillsOpen: 10
 --- !u!1 &343119855
 GameObject:
   m_ObjectHideFlags: 0
@@ -7157,7 +7155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 0
+  minKillsOpen: 10
 --- !u!1001 &425716038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7524,7 +7522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 0
+  minKillsOpen: 5
 --- !u!1 &434383887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013239581964, guid: 79c5ef9a988048c488045c56407768ce, type: 3}
@@ -9304,7 +9302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549989326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.23, y: -4.64, z: 61.67}
+  m_LocalPosition: {x: 6.23, y: -4.64, z: 61.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1216846951}
@@ -12779,18 +12777,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 105679442}
-  enemies:
-  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
-  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
-  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
-  timeInterval: 5
   spawnPoints:
   - {fileID: 105679442}
   - {fileID: 231072731}
   - {fileID: 1757149206}
   - {fileID: 604401760}
   - {fileID: 1538986792}
+  Enemies:
+  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
+  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
+  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  timeInterval: 5
 --- !u!4 &754111600
 Transform:
   m_ObjectHideFlags: 0
@@ -13878,16 +13875,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 337465085}
-  enemies:
-  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
-  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
-  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
-  timeInterval: 5
   spawnPoints:
   - {fileID: 337465085}
   - {fileID: 607310282}
   - {fileID: 320538347}
+  Enemies:
+  - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
+  - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
+  - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  timeInterval: 5
 --- !u!65 &813974851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19333,14 +19329,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 549989327}
-  enemies:
+  spawnPoints:
+  - {fileID: 549989327}
+  Enemies:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
-  timeInterval: 2
-  spawnPoints:
-  - {fileID: 549989327}
+  timeInterval: 10
 --- !u!65 &1216846950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27785,7 +27780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 0
+  minKillsOpen: 5
 --- !u!1001 &1843830456
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1421,7 +1421,7 @@ Transform:
   m_GameObject: {fileID: 6021108055465708198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.7161, y: 1.1892216, z: 8.39}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 3342067001541849147}
   - {fileID: 5815450582394839364}
@@ -1497,6 +1497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 100
+  maxLife: 100
+  _sandtornado: {fileID: 7709228047644642270, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
   enemy: {fileID: 9056891052439639280}
   player: {fileID: 4852966410527050950, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
   projectile: {fileID: 0}

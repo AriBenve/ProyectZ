@@ -16,6 +16,7 @@ public abstract class Enemy : MonoBehaviour
 
     Coroutine _getHitFeedback_Cor;
 
+    [SerializeField] GameObject _sandtornado;  
     
 
     private void Start()
@@ -24,6 +25,8 @@ public abstract class Enemy : MonoBehaviour
         _life = maxLife;
 
         _myMaterial = GetComponent<Renderer>().material;
+
+        Instantiate(_sandtornado, transform.position, Quaternion.identity);
 
     }
 
@@ -52,10 +55,10 @@ public abstract class Enemy : MonoBehaviour
 
     void Death()
     {
-        
-        StartCoroutine(ReduceToDeath());
-        
 
+        Instantiate(_sandtornado, transform.position, Quaternion.identity);
+
+        StartCoroutine(ReduceToDeath());
 
     }
 

@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 2936835616405006890}
   - component: {fileID: 7076997572565701663}
   m_Layer: 7
-  m_Name: Ranger
+  m_Name: Ranger@Idle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 2594308401758562256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4299879, y: 2.4781542, z: -9.566459}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2826907209590115378}
   - {fileID: 7141398250050772478}
@@ -831,6 +831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 100
+  maxLife: 100
+  _sandtornado: {fileID: 7709228047644642270, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
   enemy: {fileID: 2936835616405006890}
   player: {fileID: 0}
   projectile: {fileID: 7361596749394441914, guid: bd0c2a34473af22478ce37227d3904fe, type: 3}
