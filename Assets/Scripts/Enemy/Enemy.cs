@@ -42,7 +42,7 @@ public abstract class Enemy : MonoBehaviour
 
         if (_life <= 0)
         {
-            ManagerEnemy.instance.Kill();
+            //ManagerEnemy.instance.Kill();
             
             Death();
         }
@@ -57,6 +57,7 @@ public abstract class Enemy : MonoBehaviour
     {
 
         Instantiate(_sandtornado, transform.position, Quaternion.identity);
+        
 
         StartCoroutine(ReduceToDeath());
 
@@ -101,8 +102,9 @@ public abstract class Enemy : MonoBehaviour
 
             yield return null;
         }
-        
-        
+
+        ManagerEnemy.instance.Kill();
         Destroy(this.gameObject);
+       
     }
 }
