@@ -2300,6 +2300,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7709228047449626105, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709228047449626105, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7709228047644642241, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2347,6 +2355,14 @@ PrefabInstance:
     - target: {fileID: 7709228047644642270, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
       propertyPath: m_Name
       value: tornado de arena
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709228047709713572, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709228047709713572, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
+      propertyPath: lengthInSec
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4081c505485b5ee459d5ae362550c024, type: 3}
