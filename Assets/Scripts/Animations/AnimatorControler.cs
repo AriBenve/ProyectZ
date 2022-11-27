@@ -8,7 +8,7 @@ public class AnimatorControler : MonoBehaviour
 
     private void Awake()
     {
-        _animator.SetTrigger("ataque");
+
     }
 
     private void Update()
