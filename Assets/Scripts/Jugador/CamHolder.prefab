@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 65842450135977428}
   - {fileID: 8009773749445747531}
   - {fileID: 6525404870091974051}
-  - {fileID: 0}
+  - {fileID: 5199911387658463435}
   imageShotgunMode: {fileID: 0}
   tmProShotgunMode: {fileID: 0}
 --- !u!1 &3532338505808904349
@@ -657,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 300
   attackKey: 323
+  _animator: {fileID: 0}
 --- !u!1 &6525404870091974051
 GameObject:
   m_ObjectHideFlags: 0
