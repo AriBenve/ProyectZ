@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 1f + 0.6f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 1f + 0.3f, whatIsGround);
 
         _MyInput();
         _SpeedControl();
@@ -241,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _OnSlope()
     {
-        if(Physics.Raycast(transform.position, Vector3.down, out _slopeHit, playerHeight * 0.5f + 0.3f))
+        if(Physics.Raycast(transform.position, Vector3.down, out _slopeHit, playerHeight * 1f + 0.3f))
         {
             float angle = Vector3.Angle(Vector3.up, _slopeHit.normal);
             return angle < MaxSlopeAngle && angle != 0;
