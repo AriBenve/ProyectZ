@@ -8,16 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PruebaMenu.unity
     guid: cacff7b1cffaf0644b2500d7eeb83e37
-  - enabled: 0
-    path: "Assets/Scenes/ParcialProgramaci\xF3n/Menu.unity"
-    guid: 75c4c70d6ca91f74b9fe6b2f789a1e75
   - enabled: 1
     path: "Assets/Scenes/ParcialProgramaci\xF3n/integrantes.unity"
     guid: bc7e3d1d606911b4e854b784f244f974
   - enabled: 1
     path: "Assets/Scenes/ParcialProgramaci\xF3n/Controles.unity"
     guid: 36b20065a57757e409436ba76284ff33
-  - enabled: 1
-    path: Assets/Scenes/level 1/level_1/level_1.unity
-    guid: 4e8523935858ace49a49eded1fc9281c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

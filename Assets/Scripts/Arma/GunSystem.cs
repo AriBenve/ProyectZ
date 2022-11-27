@@ -14,6 +14,7 @@ public class GunSystem : MonoBehaviour
 
     [Header("Bools")]
     bool _shooting, _readyToShoot, _reloading;
+    public Animator _animator;
 
     [Header("References")]
     public Camera fpsCam;
@@ -94,6 +95,9 @@ public class GunSystem : MonoBehaviour
 
         if (_bulletsShot > 0 && _bulletsShot > 0)
             Invoke("Shoot", timeBetweenShots);
+
+        _animator.SetTrigger("ataque");
+
     }
 
     private void ResetShot()

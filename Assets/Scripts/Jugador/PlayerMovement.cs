@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float sprintSpeed;
     public float walkSpeed;
+    public Animator _animator;
 
     public float dashSpeed;
     public float dashSpeedChangeFactor;
@@ -198,6 +199,8 @@ public class PlayerMovement : MonoBehaviour
         
         //Turn gravity off while on a slope
         _rb.useGravity = !_OnSlope();
+
+        _animator.SetBool("move", true);
     }
 
     private void _SpeedControl()

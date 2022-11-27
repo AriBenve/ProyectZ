@@ -5,50 +5,21 @@ using UnityEngine.UI;
 
 public class BloodEffect : MonoBehaviour
 {
-
-
-    public Player player;
-
     public Image bloodEffectImage;
 
-    private float r;
-    private float g;
-    private float b;
-    private float a;
+    Color _color;
 
     void Start()
     {
-        r = bloodEffectImage.color.r;
-        g = bloodEffectImage.color.g;
-        b = bloodEffectImage.color.b;
-        a = bloodEffectImage.color.a;
-
-        player = FindObjectOfType<Player>();
+        _color = bloodEffectImage.color;
     }
 
 
-    void Update()
+   
+    public void UpdateLifeView(float amount)
     {
-        DamageFitBack();
+        _color.a = 1 - amount;
+
+        bloodEffectImage.color = _color;
     }
-
-    private void ChangerColor()
-    {
-        Color c = new Color(r, g, b, a);
-        bloodEffectImage.color = c;
-    }
-
-    private void DamageFitBack()
-    {
-        if (Input.GetKey(KeyCode.F))
-        {
-            a += 0.01f;
-        }
-        a -= 0.001f;
-
-        a = Mathf.Clamp(a, 0, 1f);
-
-        ChangerColor();
-    }
-
 }

@@ -13,6 +13,8 @@ public class Player : MonoBehaviour,Idamage
     [Header("Bools")]
     private bool running;
 
+    [SerializeField]BloodEffect _myBloodEffect;
+
     private void Start()
     {
         _life = maxLife;
@@ -33,6 +35,12 @@ public class Player : MonoBehaviour,Idamage
 
         _life -= d;
         Debug.Log(_life);
+
+        if (_myBloodEffect == null)
+        {
+            _myBloodEffect = FindObjectOfType<BloodEffect>();
+        }
+        _myBloodEffect.UpdateLifeView(_life / maxLife);
 
         if (_life <= 0)
         {

@@ -88,7 +88,7 @@ BlendTree:
     m_Motion: {fileID: 1827226128182048838, guid: 5c6cfe7e3e0e76b478e4dd5d5b3ead98, type: 3}
     m_Threshold: 0.75
     m_Position: {x: -1, y: 0}
-    m_TimeScale: 1
+    m_TimeScale: -1
     m_CycleOffset: 0
     m_DirectBlendParameter: move
     m_Mirror: 0
@@ -96,12 +96,12 @@ BlendTree:
     m_Motion: {fileID: 1827226128182048838, guid: 5c6cfe7e3e0e76b478e4dd5d5b3ead98, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: -1
     m_CycleOffset: 0
     m_DirectBlendParameter: move
     m_Mirror: 0
-  m_BlendParameter: move
-  m_BlendParameterY: move
+  m_BlendParameter: moving
+  m_BlendParameterY: moving
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
@@ -128,6 +128,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: moving
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -148,10 +154,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Ataque
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7066979752227774340}
   m_Solo: 0
