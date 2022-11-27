@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 4852966410527050944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.91, y: 1.37, z: -1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7213112865645306704}
   - {fileID: 4852966409927566282}
@@ -132,7 +132,7 @@ MonoBehaviour:
   dashSpeedChangeFactor: 50
   maxYspeed: 0
   groundDrag: 5
-  jumpForce: 18
+  jumpForce: 24
   jumpCooldown: 0.25
   airMultiplier: 0.7
   jumpKey: 32

@@ -8,6 +8,8 @@ public class Sword : MonoBehaviour
 
     public KeyCode attackKey;
 
+    public Animator _animator;
+
     private void Update()
     {
         MyInput();
@@ -17,7 +19,8 @@ public class Sword : MonoBehaviour
     {
         if(Input.GetKeyDown(attackKey))
         {
-            //Cosas de animación
+            _animator.SetInteger("Random", Random.Range(1, 4));
+            _animator.SetTrigger("ataque");
         }
     }
 

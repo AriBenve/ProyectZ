@@ -502,6 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 300
   attackKey: 323
+  _animator: {fileID: 1233912667}
 --- !u!65 &551001458
 BoxCollider:
   m_ObjectHideFlags: 0
