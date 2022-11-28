@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Invoke_Spawner : MonoBehaviour
 {
+    public float minKillsDisable;
     public List<Transform> spawnPoints = new List<Transform>();
     public List<GameObject> Enemies = new List<GameObject>();
     int count = 0;
     bool CR_Running = false;
     public float timeInterval;
     
+    private void Start()
+    {
+        ManagerEnemy.instance.EventKillEnemy += KillEnemy;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,7 +31,7 @@ public class Invoke_Spawner : MonoBehaviour
         
         yield return new WaitForSeconds(interval);
         
-        if(count <= 30)
+        if(count <= 5)
         {
             if (i <= 50)
             {
@@ -42,14 +47,23 @@ public class Invoke_Spawner : MonoBehaviour
             }
 
             count++;
+            
         }
 
 
         StartCoroutine(spawnEnemy(timeInterval, Enemies));
     }
-
-    /*private int EnemyCount()
+    
+    
+    public void KillEnemy(int totalKills)
     {
-        Enemies.Add (FindObjectOfType<Enemy>().gameObject);
-    }*/
+        Debug.Log("Llamo a mi metodo, mediante eventos");
+        if (totalKills >= minKillsDisable)
+        {
+            ManagerEnemy.instance.EventKillEnemy -= KillEnemy;
+            ManagerEnemy.instance.ResetKills();
+            Destroy(gameObject);
+        }
+    }
+    
 }
