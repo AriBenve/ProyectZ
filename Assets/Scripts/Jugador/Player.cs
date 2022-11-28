@@ -20,15 +20,15 @@ public class Player : MonoBehaviour,Idamage
         _life = maxLife;
     }
 
-    //private void Update()
-    //{
-    //    if(_life > maxLife)
-    //    {
-    //        float amount = _life - maxLife;
-    //        StartCoroutine(GraduallyReduceHP(amount, 5f));
-    //    }
-    //}
-    
+    private void Update()
+    {
+        if(_life > maxLife && !running)
+        {
+            StartCoroutine(GraduallyReduceHP(_life - maxLife, 5f));
+        }
+       
+    }
+
 
     public void Damage(float d)
     {
@@ -53,22 +53,25 @@ public class Player : MonoBehaviour,Idamage
         _life += amount;
     }
 
-    //IEnumerator GraduallyReduceHP(float damage, float rate)
-    //{
-    //    while (damage > 0)
-    //    {
-    //        float delta = rate * Time.deltaTime;
-
-    //        if(delta > damage)
-    //        {
-    //            _life -= damage;
-    //            break;
-    //        }
-    //        _life -= delta;
-    //        damage -= delta;
-    //        yield return null;
-    //    }
-    //}
+    public IEnumerator GraduallyReduceHP(float damage, float rate)
+    {
+        while (damage > 0)
+        {
+            float delta = rate * Time.deltaTime;
+            if(_life <= 0)
+            {
+                Death();
+            }
+            if(delta > damage)
+            {
+                _life -= damage;
+                break;
+            }
+            _life -= delta;
+            damage -= delta;
+            yield return null;
+        }
+    }
 
     public void Death()
     {
