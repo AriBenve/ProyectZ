@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minKillsDisable: 0
   spawnPoints:
   - {fileID: 841302800}
   - {fileID: 1608332138}
@@ -4604,6 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minKillsDisable: 0
   spawnPoints:
   - {fileID: 853337928}
   - {fileID: 205751240}
@@ -12777,6 +12779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minKillsDisable: 0
   spawnPoints:
   - {fileID: 105679442}
   - {fileID: 231072731}
@@ -13875,6 +13878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minKillsDisable: 10
   spawnPoints:
   - {fileID: 337465085}
   - {fileID: 607310282}
@@ -19329,6 +19333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minKillsDisable: 5
   spawnPoints:
   - {fileID: 549989327}
   Enemies:
