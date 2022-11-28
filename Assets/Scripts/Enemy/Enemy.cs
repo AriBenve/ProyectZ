@@ -48,8 +48,8 @@ public abstract class Enemy : MonoBehaviour
     void Death()
     {
 
-        Instantiate(_sandtornado, transform.position, Quaternion.identity);
         ManagerEnemy.instance.Kill();
+        Instantiate(_sandtornado, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         //StartCoroutine(ReduceToDeath());
 

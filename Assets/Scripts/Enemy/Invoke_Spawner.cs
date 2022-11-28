@@ -10,6 +10,7 @@ public class Invoke_Spawner : MonoBehaviour
     int count = 0;
     bool CR_Running = false;
     public float timeInterval;
+    public int EnemiesSpawn;
     
     private void Start()
     {
@@ -31,7 +32,7 @@ public class Invoke_Spawner : MonoBehaviour
         
         yield return new WaitForSeconds(interval);
         
-        if(count <= 5)
+        if(count <= EnemiesSpawn)
         {
             if (i <= 50)
             {

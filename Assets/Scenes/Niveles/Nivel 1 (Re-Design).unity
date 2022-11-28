@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 0
+  minKillsDisable: 30
   spawnPoints:
   - {fileID: 841302800}
   - {fileID: 1608332138}
@@ -2751,6 +2751,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 5
+  EnemiesSpawn: 16
 --- !u!65 &153917210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4605,7 +4606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 0
+  minKillsDisable: 70
   spawnPoints:
   - {fileID: 853337928}
   - {fileID: 205751240}
@@ -4616,6 +4617,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 5
+  EnemiesSpawn: 12
 --- !u!4 &256460906
 Transform:
   m_ObjectHideFlags: 0
@@ -12779,7 +12781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 0
+  minKillsDisable: 60
   spawnPoints:
   - {fileID: 105679442}
   - {fileID: 231072731}
@@ -12791,6 +12793,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 5
+  EnemiesSpawn: 32
 --- !u!4 &754111600
 Transform:
   m_ObjectHideFlags: 0
@@ -13888,6 +13891,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 5
+  EnemiesSpawn: 6
 --- !u!65 &813974851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19340,7 +19344,8 @@ MonoBehaviour:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
-  timeInterval: 10
+  timeInterval: 2
+  EnemiesSpawn: 10
 --- !u!65 &1216846950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21675,7 +21680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 0
+  minKillsOpen: 20
 --- !u!1 &1431264842
 GameObject:
   m_ObjectHideFlags: 0
