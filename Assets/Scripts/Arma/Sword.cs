@@ -35,17 +35,19 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Enemy enemy = other.GetComponent<Enemy>();
+        Enemy _enemy = other.GetComponent<Enemy>();
 
-        if (enemy != null && swordAmmo <= 0)
+        Debug.Log(other);
+
+        if (_enemy != null && swordAmmo >= 0)
         {
-            if (enemy._life <= dmg)
+            if (_enemy._life <= dmg)
             {
-                if(enemy._life <= 100)
+                if(_enemy._life <= 100)
                 {
                     swordAmmo--;
                 }
-                else if(enemy._life >= 101 && enemy._life <= 200)
+                else if(_enemy._life >= 101 && _enemy._life <= 200)
                 {
                     swordAmmo -= maxSwordAmmo - 1;
                 }
@@ -54,19 +56,16 @@ public class Sword : MonoBehaviour
                     swordAmmo -= maxSwordAmmo;
                 }
                 //Curaciones y daño al enemigo
-                FindObjectOfType<Player>().Heal(Random.Range(50, enemy.maxLife));
-                enemy.GetHit(dmg);
+                FindObjectOfType<Player>().Heal(Random.Range(50, _enemy.maxLife));
+                _enemy.GetHit(dmg);
             }
             else 
             {
-                enemy.GetHit(dmg);
+                _enemy.GetHit(dmg);
                 swordAmmo -= maxSwordAmmo;
             }
                 
-        }
-
-
-                
+        }                
         else
             Debug.Log("Weon reculeado no puedo suicidarme ||todavia|| tengo un egipto entero que rescatar");
     }
