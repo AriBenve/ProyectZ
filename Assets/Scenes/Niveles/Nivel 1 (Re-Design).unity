@@ -23193,6 +23193,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7088047103972097525, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1926474282}
     - target: {fileID: 7113600838286616864, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: slug
       value: 
