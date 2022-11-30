@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003004, b: 0.33566722, a: 1}
+  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003007, b: 0.3356672, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17158,14 +17158,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1556642938}
     - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-      propertyPath: dashCd
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-      propertyPath: resetVel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1556642939}
@@ -18908,6 +18900,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7075687, y: 0.9366627, z: 1.485141}
   m_Center: {x: 5.3290705e-15, y: 0.4683314, z: -0.00000008940697}
+--- !u!1 &1199679611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d7aabd1367acba447853f4b34d84dbc1, type: 3}
+  m_PrefabInstance: {fileID: 1056959327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1199679612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199679611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1199679613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199679611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dbf7d282176524a97e78bdf3f74708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1202796912
 GameObject:
   m_ObjectHideFlags: 0
@@ -22934,6 +22956,14 @@ PrefabInstance:
     - target: {fileID: 65842450135977428, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65842450135977429, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.583
+      objectReference: {fileID: 0}
+    - target: {fileID: 65842450135977429, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.143
       objectReference: {fileID: 0}
     - target: {fileID: 65842450393236408, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: cameraPosition
