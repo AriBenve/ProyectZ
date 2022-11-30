@@ -29,9 +29,18 @@ public class ManagerMenu : MonoBehaviour
         SceneManager.LoadScene("Nivel 2 (Re-Design)");
     }
 
+    public void Victoria()
+    {
+        SceneManager.LoadScene("Fin");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        Pasardelevel();
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+            Pasardelevel();
+        else
+            Victoria();
+
     }
 
     public void Exit()
