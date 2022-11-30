@@ -22933,7 +22933,7 @@ PrefabInstance:
       objectReference: {fileID: 1556642942}
     - target: {fileID: 65842450135977428, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65842450393236408, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: cameraPosition
@@ -23225,7 +23225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009773749445747531, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9162392817172028396, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_Layer

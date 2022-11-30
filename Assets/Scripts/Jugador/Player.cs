@@ -20,6 +20,11 @@ public class Player : MonoBehaviour,Idamage
         _life = maxLife;
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void Damage(float d)
     {
 
