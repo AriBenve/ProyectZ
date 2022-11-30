@@ -169,7 +169,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9477dcf069be49244988710903285f0b, type: 3}
   audioSource: {fileID: 0}
   cam: {fileID: 0}
-  dashFov: 105
+  dashFov: 115
   _fowardDashParticleSystem: {fileID: 0}
   _backwardsDashParticleSystem: {fileID: 0}
   _leftDashParticleSystem: {fileID: 0}
