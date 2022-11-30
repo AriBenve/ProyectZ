@@ -736,7 +736,7 @@ MonoBehaviour:
   range: 100
   reloadTime: 0.02
   timeBetweenShots: 0
-  magazineSize: 64
+  magazineSize: 66
   bulletsPerTap: 6
   allowButtonHold: 0
   _animator: {fileID: 0}

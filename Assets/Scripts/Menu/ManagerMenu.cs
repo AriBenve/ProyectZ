@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ManagerMenu : MonoBehaviour
 {
-    private void Update()
-    {
-        Pasardelevel();
-    }
     public void EscenaOpciones()
     {
        SceneManager.LoadScene("Controles");
     }
     public void EscenaJuego()
     {
-       SceneManager.LoadScene("level_1");
+       SceneManager.LoadScene("Nivel 1 (Re-Design)");
     }
 
     public void EscenaIntegrantes()
@@ -30,10 +26,12 @@ public class ManagerMenu : MonoBehaviour
 
     public void Pasardelevel()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene("Level1_2.0");
-        }
+        SceneManager.LoadScene("Nivel 2 (Re-Design)");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Pasardelevel();
     }
 
     public void Exit()
