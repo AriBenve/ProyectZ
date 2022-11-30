@@ -17645,14 +17645,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 271216562}
     - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-      propertyPath: dashCd
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
-      propertyPath: resetVel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852966410527050948, guid: df0b04259e52c0046992c78648eb4a74, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 271216561}
