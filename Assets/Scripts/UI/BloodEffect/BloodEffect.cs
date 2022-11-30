@@ -14,11 +14,23 @@ public class BloodEffect : MonoBehaviour
         _color = bloodEffectImage.color;
     }
 
+    private void Update()
+    {
+        UpdateAlpha();
+    }
 
-   
+
+
     public void UpdateLifeView(float amount)
     {
         _color.a = 1 - amount;
+
+        bloodEffectImage.color = _color;
+    }
+
+    void UpdateAlpha()
+    {
+        _color.a -= 0.0001f;
 
         bloodEffectImage.color = _color;
     }

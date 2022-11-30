@@ -13,15 +13,13 @@ public class AnimatorControler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Vertical"))
+        if (Input.GetButtonDown("Vertical") || Input.GetButtonDown("Horizontal"))
         {
-            Debug.Log("ahi");
-            _animator.SetFloat("moving", 1f);
+           _animator.SetFloat("moving", 1f);
         }
-        else if (Input.GetButtonUp("Vertical"))
+        else if (Input.GetButtonUp("Vertical") || Input.GetButtonUp("Horizontal"))
         {
             _animator.SetFloat("moving", 0f);
-            Debug.Log("me solto");
         }
     }
 }
