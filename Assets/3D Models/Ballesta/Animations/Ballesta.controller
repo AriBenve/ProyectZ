@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 8285029945975721842}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_Position: {x: 270, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5854131517107031010}
     m_Position: {x: 270, y: 240, z: 0}
@@ -86,24 +86,18 @@ AnimatorController:
   m_Name: Ballesta
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: move
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: ataque
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: moving
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -149,7 +143,7 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: -3100369314251171874, guid: 91da23f3c9c7d4341934c44f375031d1, type: 3}
-    m_Threshold: 0.4375
+    m_Threshold: 0.578125
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -157,7 +151,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -3419257869308726280, guid: 2332eaae65fdd57429bbd2faeff64552, type: 3}
-    m_Threshold: 0.578125
+    m_Threshold: 0.68359375
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -165,7 +159,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -3419257869308726280, guid: 2332eaae65fdd57429bbd2faeff64552, type: 3}
-    m_Threshold: 0.71875
+    m_Threshold: 0.7890625
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -173,7 +167,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -3419257869308726280, guid: 2332eaae65fdd57429bbd2faeff64552, type: 3}
-    m_Threshold: 0.859375
+    m_Threshold: 0.89453125
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -189,7 +183,7 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: moving
   m_BlendParameterY: moving
-  m_MinThreshold: 0.4375
+  m_MinThreshold: 0.578125
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
