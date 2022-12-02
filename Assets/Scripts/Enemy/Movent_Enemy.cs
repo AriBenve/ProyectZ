@@ -22,7 +22,7 @@ public abstract class Movent_Enemy : Enemy
 
     protected virtual void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindObjectOfType<Player>().transform;
         enemy = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
     }

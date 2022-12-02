@@ -200,8 +200,8 @@ MonoBehaviour:
   pm: {fileID: 4852966410527050949}
   climbSpeed: 10
   maxClimbTime: 0.75
-  detectionLength: 0.7
-  sphereCastRadius: 0.25
+  detectionLength: 1.4
+  sphereCastRadius: 0.5
   maxWallAngle: 30
 --- !u!1 &7332338034261301200
 GameObject:
