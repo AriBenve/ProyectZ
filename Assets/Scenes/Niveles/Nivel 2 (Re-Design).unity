@@ -4751,7 +4751,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 1
-  EnemiesSpawn: 30
+  EnemiesSpawn: 50
 --- !u!4 &388967169
 Transform:
   m_ObjectHideFlags: 0
@@ -40956,7 +40956,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
   timeInterval: 1
-  EnemiesSpawn: 30
+  EnemiesSpawn: 50
 --- !u!4 &1777758741
 Transform:
   m_ObjectHideFlags: 0
@@ -47984,8 +47984,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 70.62, y: 13.79, z: 39.620007}
-  m_Center: {x: 0, y: 0.96, z: 7.500002}
+  m_Size: {x: 42.90172, y: 4.9832215, z: 39.620007}
+  m_Center: {x: 5.947975, y: 3.4167554, z: 7.500002}
 --- !u!114 &1955184649
 MonoBehaviour:
   m_ObjectHideFlags: 0
