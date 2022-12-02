@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ManagerMenu : MonoBehaviour
 {
+    private void Update()
+    {
+        VolverMenu();
+    }
+    public void VolverMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("Nivel 1 (Re-Design)");
+        }
+    }
     public void EscenaOpciones()
     {
        SceneManager.LoadScene("Controles");
@@ -22,6 +33,11 @@ public class ManagerMenu : MonoBehaviour
     public void EscenaMenu()
     {
         SceneManager.LoadScene("PruebaMenu");
+    }
+
+    public void EscenaPruebas()
+    {
+        SceneManager.LoadScene("Juego");
     }
 
     public void Pasardelevel()
