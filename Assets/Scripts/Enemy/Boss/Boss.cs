@@ -67,7 +67,7 @@ public class Boss : MonoBehaviour
             }
         }
     }
-
+    #region Animaciones
     public void Final_Ani()
     {
         rutina = 0;
@@ -86,6 +86,8 @@ public class Boss : MonoBehaviour
     {
         direction_Skil = false;
     }
+    #endregion
+    #region melee
     /////////---- Melee ----////////
 
     public void ColliderWeaponTrue()
@@ -98,7 +100,8 @@ public class Boss : MonoBehaviour
     }
 
     //////////////////////////////////
-
+    #endregion
+    #region Lanzallamas
     //////---- Lanzallamas ----//////
 
     public GameObject GetBala()
@@ -137,7 +140,8 @@ public class Boss : MonoBehaviour
         lanza_llamas = false;
     }
     /////////////////////////////////////
-
+    #endregion
+    #region Fire Ball
     ////////---- Fire Ball ----//////   
 
     public GameObject Get_Fire_Ball()
@@ -163,7 +167,8 @@ public class Boss : MonoBehaviour
     }
 
     /////////////////////////////////////
-
+    #endregion
+    #region Vida
     public void Vivo()
     {
         if (HP_Min < 500)
@@ -180,8 +185,8 @@ public class Boss : MonoBehaviour
         }
 
     }
-
-
+    #endregion
+    #region Comportamiento Boss
     public void Comportamiento_Boss()
     {
         if (Vector3.Distance(transform.position, target.transform.position) > 15)
@@ -295,4 +300,5 @@ public class Boss : MonoBehaviour
         }
 
     }
+    #endregion
 }
