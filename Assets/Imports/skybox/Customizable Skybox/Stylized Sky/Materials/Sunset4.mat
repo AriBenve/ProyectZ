@@ -64,7 +64,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HorizonLineBlendMode: 0
-    - _HorizonLineContribution: 0.7
+    - _HorizonLineContribution: 0.863
     - _HorizonLineExponent: 30
     - _Metallic: 0
     - _Mode: 0
@@ -80,7 +80,7 @@ Material:
     - _SunDiscMultiplier: 100000
     - _SunDiscMultiplierSharpness: 1000
     - _SunHaloBlendMode: 0
-    - _SunHaloContribution: 0.5
+    - _SunHaloContribution: 0.259
     - _SunHaloExponent: 100
     - _UVSec: 0
     - _View: 0
@@ -89,7 +89,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HorizonLineColor: {r: 1, g: 0.40392157, b: 0.21176471, a: 0.6}
+    - _HorizonLineColor: {r: 1, g: 0.30301583, b: 0.2117647, a: 0.6}
     - _SkyGradientBottom: {r: 0.37254903, g: 0.13725491, b: 0.12156863, a: 1}
     - _SkyGradientTop: {r: 0, g: 0, b: 0, a: 1}
     - _SunDiscColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
