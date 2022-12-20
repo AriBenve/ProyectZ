@@ -2246,6 +2246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7452120288280757154, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 7758108118067314424, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_Name
       value: Boss-prototipo@Melee
