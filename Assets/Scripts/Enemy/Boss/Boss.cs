@@ -44,7 +44,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
-        target = GameObject.Find("Player");
+        target = GameObject.Find("Capsule");
 
     }
 
@@ -189,7 +189,7 @@ public class Boss : MonoBehaviour
     #region Comportamiento Boss
     public void Comportamiento_Boss()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 15)
+        if (Vector3.Distance(transform.position, target.transform.position) < 15)
         {
             var lookPos = target.transform.position - transform.position;
             lookPos.y = 0;
@@ -240,7 +240,7 @@ public class Boss : MonoBehaviour
                         ani.SetBool("walk", false);
                         ani.SetBool("run", false);
                         ani.SetBool("attack", true);
-                        ani.SetFloat("skills", 0);
+                        ani.SetFloat("skills", 0.8f);
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         rango.GetComponent<CapsuleCollider>().enabled = false;
                         break;
@@ -252,7 +252,7 @@ public class Boss : MonoBehaviour
                             ani.SetBool("walk", false);
                             ani.SetBool("run", false);
                             ani.SetBool("attack", true);
-                            ani.SetFloat("skills", 0);
+                            ani.SetFloat("skills", 0.6f);
                             hit_Select = 3;
                             rango.GetComponent<CapsuleCollider>().enabled = false;
 
@@ -280,7 +280,7 @@ public class Boss : MonoBehaviour
                             ani.SetBool("walk", false);
                             ani.SetBool("run", false);
                             ani.SetBool("attack", true);
-                            ani.SetFloat("skills", 0);
+                            ani.SetFloat("skills", 1);
                             rango.GetComponent<CapsuleCollider>().enabled = false;
                             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
                         }
