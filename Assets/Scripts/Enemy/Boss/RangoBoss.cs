@@ -10,39 +10,42 @@ public class RangoBoss : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-
-        melee = Random.Range(0, 4);
-        switch (melee)
+        if (CompareTag("Player"))
         {
-            case 0:
-                ///--Golpe 1--///
-                ani.SetFloat("skills", 0);
-                boss.hit_Select = 0;
-                ani.SetBool("attack", false);
-                break;
-            case 1:
-                ///--Golpe 2--///
-                ani.SetFloat("skills", 0.2f);
-                boss.hit_Select = 1;
-                ani.SetBool("attack", false);
-                break;
-            case 2:
-                ///--Jump--///
-                ani.SetFloat("skills", 0.4f);
-                boss.hit_Select = 2;
-                ani.SetBool("attack", false);
-                break;
-            case 3:
-                /// Fire Ball///
-                if(boss.fase == 2)
-                {
-                    ani.SetFloat("skills", 1);
-                }
-                else
-                {
-                    melee = 0;
-                }
-                break;
+
+            melee = Random.Range(0, 4);
+            switch (melee)
+            {
+                case 0:
+                    ///--Golpe 1--///
+                    ani.SetFloat("skills", 0);
+                    boss.hit_Select = 0;
+                    ani.SetBool("attack", false);
+                    break;
+                case 1:
+                    ///--Golpe 2--///
+                    ani.SetFloat("skills", 0.2f);
+                    boss.hit_Select = 1;
+                    ani.SetBool("attack", false);
+                    break;
+                case 2:
+                    ///--Jump--///
+                    ani.SetFloat("skills", 0.4f);
+                    boss.hit_Select = 2;
+                    ani.SetBool("attack", false);
+                    break;
+                case 3:
+                    /// Fire Ball///
+                    if(boss.fase == 2)
+                    {
+                        ani.SetFloat("skills", 1);
+                    }
+                    else
+                    {
+                        melee = 0;
+                    }
+                    break;
+            }
         }
         ani.SetBool("walk", false);
         ani.SetBool("run", false);

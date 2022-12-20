@@ -18,6 +18,7 @@ public class Boss : MonoBehaviour
     public float speed;
     public GameObject[] hit;
     public int hit_Select;
+    public int Rangos;
     [Header("Lanzallamas")]
     public bool lanza_llamas;
     public List<GameObject> pool = new List<GameObject>();
@@ -44,7 +45,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
-        target = GameObject.Find("Capsule");
+        target = GameObject.Find("Player");
 
     }
 
@@ -52,20 +53,21 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        barra.fillAmount = HP_Min / HP_Max;
-        if(HP_Min > 0)
-        {
-            Vivo();
-        }
-        else
-        {
-            if (!muerto)
-            {
-                ani.SetTrigger("dead");
-                musica.enabled = false;
-                muerto = true;
-            }
-        }
+        //barra.fillAmount = HP_Min / HP_Max;
+        //if(HP_Min > 0)
+        //{
+        //    Vivo();
+        //}
+        //else
+        //{
+        //    if (!muerto)
+        //    {
+        //        ani.SetTrigger("dead");
+        //        musica.enabled = false;
+        //        muerto = true;
+        //    }
+        //}
+        Comportamiento_Boss();
     }
     #region Animaciones
     public void Final_Ani()
@@ -189,14 +191,15 @@ public class Boss : MonoBehaviour
     #region Comportamiento Boss
     public void Comportamiento_Boss()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) < 15)
+        if (Vector3.Distance(transform.position, target.transform.position) < Rangos)
         {
+            Debug.Log("Encontre Player");
             var lookPos = target.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
             point.transform.LookAt(target.transform.position);
-            musica.enabled = true;
-            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando)
+            //musica.enabled = true;
+            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando )
             {
                 switch (rutina)
                 {
