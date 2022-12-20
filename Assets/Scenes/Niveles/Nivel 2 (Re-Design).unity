@@ -403,12 +403,33 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7452120288280757158, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452120288280757158, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: Rangos
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7452120288280757158, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: atacando
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452120288280757159, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 4689ab44a52c5834cb04d062a014d9c3, type: 3}
+    - target: {fileID: 7452120288280757159, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Melee'\n\tFrom
+        animation clip ' Attack'\n\tFrom animation clip 'Lanzallamas'\n\tFrom animation
+        clip 'BolaDeFuego'\n\tFrom animation clip 'Run'\n\tFrom animation clip 'Dying'\n\tFrom
+        animation clip ' Idle'\n\tFrom animation clip 'Run'"
       objectReference: {fileID: 0}
     - target: {fileID: 7452120288894443130, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_Layer
@@ -23300,7 +23321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 80
+  minKillsOpen: 70
 --- !u!1 &1145450300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010736078000, guid: a02009fcc6168a84d8ba0808a16e31d2, type: 3}
@@ -43889,6 +43910,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b486cb38fd9b7c7409e9fafb7e457520, type: 3}
   m_PrefabInstance: {fileID: 1963017451}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964465307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7758108118067314424, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+  m_PrefabInstance: {fileID: 3659935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1964465313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964465307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27458382, y: 1.4064976, z: 0.47496796}
+  m_Center: {x: 0.019903755, y: 0.70022357, z: 0.093077086}
 --- !u!1001 &1965703816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45384,7 +45423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 80
+  minKillsOpen: 70
 --- !u!64 &2048928055
 MeshCollider:
   m_ObjectHideFlags: 0

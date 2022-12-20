@@ -220,13 +220,16 @@ public class Boss : MonoBehaviour
                         cronometro += 1 * Time.deltaTime;
                         if (cronometro > time_rutinas)
                         {
-                            rutina = Random.Range(0, 5);
+                            Debug.Log("hola");
+                            rutina = Random.Range(2, 5);
+                            Debug.Log("hola");
                             cronometro = 0;
                         }
 
                         break;
                     case 1:
                         ////Run////
+                        Debug.Log("Rutina 1");
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         ani.SetBool("walk", false);
                         ani.SetBool("run", true);
@@ -235,27 +238,30 @@ public class Boss : MonoBehaviour
                         {
                             transform.Translate(Vector3.forward * speed * Time.deltaTime);
                         }
-
+                        Final_Ani();
                         ani.SetBool("attack", false);
                         break;
                     case 2:
                         ////Lanzallamas/////
+                        Debug.Log("RUtina 2");
                         ani.SetBool("walk", false);
                         ani.SetBool("run", false);
                         ani.SetBool("attack", true);
-                        ani.SetFloat("skills", 0.8f);
+                        ani.SetFloat("Skills", 0.8f);
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         rango.GetComponent<CapsuleCollider>().enabled = false;
+                        
                         break;
                     case 3:
                         ////Jump///
+                        Debug.Log("RUtina 3");
                         if (fase == 2)
                         {
                             jump_distance += 1 * Time.deltaTime;
                             ani.SetBool("walk", false);
                             ani.SetBool("run", false);
                             ani.SetBool("attack", true);
-                            ani.SetFloat("skills", 0.6f);
+                            ani.SetFloat("Skills", 0.6f);
                             hit_Select = 3;
                             rango.GetComponent<CapsuleCollider>().enabled = false;
 
@@ -275,25 +281,23 @@ public class Boss : MonoBehaviour
                                 cronometro = 0;
                             }
                         }
+
+                        
                         break;
                     case 4:
+                        Debug.Log("RUtina 4");
                         if (fase == 2)
                         {
                             jump_distance += 1 * Time.deltaTime;
                             ani.SetBool("walk", false);
                             ani.SetBool("run", false);
                             ani.SetBool("attack", true);
-                            ani.SetFloat("skills", 1);
+                            ani.SetFloat("Skills", 1);
                             rango.GetComponent<CapsuleCollider>().enabled = false;
                             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
                         }
-                        else
-                        {
-                            rutina = 0;
-                            cronometro = 0;
-                        }
-
-                        break;
+                        Final_Ani();
+                       break;
                 }
 
 
