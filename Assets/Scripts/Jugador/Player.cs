@@ -74,6 +74,13 @@ public class Player : MonoBehaviour,Idamage
     public void Death()
     {
         Debug.Log("Me fulminaron wachin que carajo hiciste pedazo de aweonado");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if(SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            SceneManager.LoadScene("Nivel 1 (Re-Design)");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

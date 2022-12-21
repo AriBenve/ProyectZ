@@ -22,7 +22,7 @@ public class ManagerMenu : MonoBehaviour
     }
     public void EscenaJuego()
     {
-       SceneManager.LoadScene("Nivel 1 (Re-Design)");
+       SceneManager.LoadScene("Tutorial");
     }
 
     public void EscenaIntegrantes()
@@ -52,7 +52,7 @@ public class ManagerMenu : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(SceneManager.GetActiveScene().buildIndex == 3)
+        if(SceneManager.GetActiveScene().buildIndex == 4)
             Pasardelevel();
         else
             Victoria();
