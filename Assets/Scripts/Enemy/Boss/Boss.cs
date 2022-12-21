@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Boss : MonoBehaviour
+public class Boss : Enemy
 {
     [Header("Base Code")]
     public int rutina;
@@ -34,8 +34,6 @@ public class Boss : MonoBehaviour
     public List<GameObject> pool2 = new List<GameObject>();
     [Header("Boss Phase")]
     public int fase = 1;
-    public float HP_Min;
-    public float HP_Max;
     public Image barra;
     public AudioSource musica;
     public bool muerto;
@@ -46,7 +44,7 @@ public class Boss : MonoBehaviour
     {
         ani = GetComponent<Animator>();
         target = GameObject.Find("Player");
-
+        
     }
 
 
@@ -173,7 +171,7 @@ public class Boss : MonoBehaviour
     #region Vida
     public void Vivo()
     {
-        if (HP_Min < 500)
+        if (_life < maxLife/2)
         {
             fase = 2;
             time_rutinas = 1;
@@ -199,13 +197,14 @@ public class Boss : MonoBehaviour
             var rotation = Quaternion.LookRotation(lookPos);
             point.transform.LookAt(target.transform.position);
             //musica.enabled = true;
-            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando )
+            if (Vector3.Distance(transform.position, target.transform.position) > 1 && atacando )
             {
                 switch (rutina)
                 {
 
                     case 0:
                         ////Walk/////
+                        Debug.Log("voy al Player");
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         ani.SetBool("walk", true);
                         ani.SetBool("run", false);
@@ -221,7 +220,7 @@ public class Boss : MonoBehaviour
                         if (cronometro > time_rutinas)
                         {
                             Debug.Log("hola");
-                            rutina = Random.Range(2, 5);
+                            rutina = Random.Range(1, 4);
                             Debug.Log("hola");
                             cronometro = 0;
                         }
@@ -247,45 +246,14 @@ public class Boss : MonoBehaviour
                         ani.SetBool("walk", false);
                         ani.SetBool("run", false);
                         ani.SetBool("attack", true);
-                        ani.SetFloat("Skills", 0.8f);
+                        ani.SetFloat("Skills", 0.6666666f);
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         rango.GetComponent<CapsuleCollider>().enabled = false;
-                        
+                        Final_Ani();
                         break;
+                   
                     case 3:
-                        ////Jump///
-                        Debug.Log("RUtina 3");
-                        if (fase == 2)
-                        {
-                            jump_distance += 1 * Time.deltaTime;
-                            ani.SetBool("walk", false);
-                            ani.SetBool("run", false);
-                            ani.SetBool("attack", true);
-                            ani.SetFloat("Skills", 0.6f);
-                            hit_Select = 3;
-                            rango.GetComponent<CapsuleCollider>().enabled = false;
-
-                            if (direction_Skil)
-                            {
-                                if (jump_distance < 1f)
-                                {
-                                    transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
-                                }
-
-                                transform.Translate(Vector3.forward * 8 * Time.deltaTime);
-
-                            }
-                            else
-                            {
-                                rutina = 0;
-                                cronometro = 0;
-                            }
-                        }
-
-                        
-                        break;
-                    case 4:
-                        Debug.Log("RUtina 4");
+                        /// Fire Ball ///
                         if (fase == 2)
                         {
                             jump_distance += 1 * Time.deltaTime;

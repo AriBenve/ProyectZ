@@ -13,7 +13,7 @@ public class RangoBoss : MonoBehaviour
         if (CompareTag("Player"))
         {
 
-            melee = Random.Range(0, 4);
+            melee = Random.Range(0, 3);
             switch (melee)
             {
                 case 0:
@@ -28,13 +28,8 @@ public class RangoBoss : MonoBehaviour
                     boss.hit_Select = 1;
                     ani.SetBool("attack", false);
                     break;
+               
                 case 2:
-                    ///--Jump--///
-                    ani.SetFloat("Skills", 0.4f);
-                    boss.hit_Select = 2;
-                    ani.SetBool("attack", false);
-                    break;
-                case 3:
                     /// Fire Ball///
                     if(boss.fase == 2)
                     {
