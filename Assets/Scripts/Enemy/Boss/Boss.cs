@@ -242,7 +242,7 @@ public class Boss : Enemy
                         break;
                     case 2:
                         ////Lanzallamas/////
-                        Debug.Log("RUtina 2");
+                        Debug.Log("Rutina 2");
                         ani.SetBool("walk", false);
                         ani.SetBool("run", false);
                         ani.SetBool("attack", true);

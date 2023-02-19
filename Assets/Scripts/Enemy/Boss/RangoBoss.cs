@@ -49,15 +49,4 @@ public class RangoBoss : MonoBehaviour
         GetComponent<CapsuleCollider>().enabled = false;
 
     }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -5,11 +5,6 @@ using TMPro;
 
 public class Bow : MonoBehaviour
 {
-    /// 
-    /// 1. Alles ausser textMeshPro stuff
-    /// 2. textMeshPro
-    /// 
-
     [Header("References")]
     public Transform cam;
     public Transform attackPoint;
