@@ -27,6 +27,7 @@ public class Boss_S : Enemy
     [Header("Movement")]
     float distance;
     Rigidbody rb;
+    [SerializeField] float rbRotationSpeed;
     [SerializeField] float maxDistance;
     [SerializeField] float speed;
 
@@ -42,7 +43,8 @@ public class Boss_S : Enemy
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= maxDistance && !attacking)
         {
-            StateMachine();
+            //StateMachine();
+            Chase();
         }
     }
 
@@ -52,7 +54,7 @@ public class Boss_S : Enemy
         switch(rutine)
         {
             case 0: //Caminar
-
+                
                 break;
             case 1: //Ataque Melee
                 print("hola mundo");
@@ -94,7 +96,21 @@ public class Boss_S : Enemy
     #region Movement
     void Chase()
     {
+        anim.SetBool("walk", true);
+        anim.SetBool("run", false);
+        RotateRB();
+        rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
+    }
 
+    void RotateRB()
+    {
+        Vector3 localTarget = transform.InverseTransformPoint(player.transform.position);
+
+        float angle = Mathf.Atan2(localTarget.x, localTarget.y) * Mathf.Rad2Deg;
+        
+        Vector3 eulerAngleVelocity = new Vector3(0f, angle, 0f);
+        Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.deltaTime * rbRotationSpeed);
+        rb.MoveRotation(rb.rotation * deltaRotation);
     }
     #endregion
 }

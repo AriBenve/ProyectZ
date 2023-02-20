@@ -331,6 +331,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2181764933334896071, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181764933334896071, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
@@ -1080,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8889076636878896177, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8981594597377012403, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -47419,8 +47423,9 @@ MonoBehaviour:
   spawnFire: {fileID: 1411319047}
   hitbox: []
   meleeRange: 2
+  rbRotationSpeed: 5
   maxDistance: 50
-  speed: 0
+  speed: 5
 --- !u!95 &1964465309
 Animator:
   serializedVersion: 3
