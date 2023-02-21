@@ -47414,15 +47414,17 @@ MonoBehaviour:
   _life: 1000
   maxLife: 1000
   _sandtornado: {fileID: 276894145092734396, guid: 19b3bce631427f7438833c536a3707b0, type: 3}
-  range: 10
+  range: 20
   CD: 0
   CDBetweenRutines: 2
   rutine: 1
   anim: {fileID: 1964465309}
   RGB: {fileID: 0}
   spawnFire: {fileID: 1411319047}
-  hitbox: []
-  meleeRange: 2
+  hitbox:
+  - {fileID: 500272440}
+  - {fileID: 1130127979}
+  meleeRange: 5
   rbRotationSpeed: 5
   maxDistance: 50
   speed: 5

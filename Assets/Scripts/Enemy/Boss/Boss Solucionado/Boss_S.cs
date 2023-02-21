@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Boss_S : Enemy
 {
-    [Header("Base Code")]
+    [Header("Rutine")]
     [SerializeField] int range;
     [SerializeField] float CD; //CoolDown
     [SerializeField] float CDBetweenRutines;
     [SerializeField] int rutine;
     GameObject player;
+    float actualdistance;
     
     [Header("Animations")]
     public Animator anim;
@@ -41,29 +42,47 @@ public class Boss_S : Enemy
 
     private void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= maxDistance && !attacking)
+        actualdistance = Vector3.Distance(player.transform.position, transform.position);
+        if (actualdistance <= maxDistance && !attacking)
         {
-            //StateMachine();
-            Chase();
+            SelectRutine();
+            StateMachine();
         }
     }
 
     #region Comportamiento
+    void SelectRutine()
+    {
+        if(actualdistance <= maxDistance && actualdistance >= range)
+        {
+            rutine = 0;
+        }
+        else if(actualdistance <= range && actualdistance >= meleeRange)
+        {
+            rutine = 2;
+        }
+        else if(actualdistance <= meleeRange)
+        {
+            rutine = 1;
+        }
+    }
+
     void StateMachine()
     {
         switch(rutine)
         {
             case 0: //Caminar
-                
+                print("Run");
+                Chase();
                 break;
             case 1: //Ataque Melee
-                print("hola mundo");
+                print("hola mundo de los melees");
                 attacking = true;
                 anim.SetFloat("skills", 0f);
                 anim.SetBool("attack", true);
                 break;
             case 2: //Bola de fuego
-                print("hola mundo");
+                print("hola mundo de los fuegos");
                 attacking = true;
                 anim.SetFloat("skills", 1f);
                 anim.SetBool("attack", true);
@@ -80,8 +99,6 @@ public class Boss_S : Enemy
     }
     #endregion
     #region Melee
-    /////////---- Melee ----////////
-
     public void ColliderWeaponTrue()
     {
         hitbox[hit_Select].GetComponent<SphereCollider>().enabled = true;
@@ -90,8 +107,6 @@ public class Boss_S : Enemy
     {
         hitbox[hit_Select].GetComponent<SphereCollider>().enabled = false;
     }
-
-    //////////////////////////////////
     #endregion
     #region Movement
     void Chase()
