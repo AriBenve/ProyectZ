@@ -47442,7 +47442,7 @@ MonoBehaviour:
   _life: 1000
   maxLife: 1000
   _sandtornado: {fileID: 276894145092734396, guid: 19b3bce631427f7438833c536a3707b0, type: 3}
-  range: 30
+  range: 20
   CD: 0
   CDBetweenRutines: 2
   rutine: 1
@@ -47454,9 +47454,9 @@ MonoBehaviour:
   - {fileID: 500272440}
   - {fileID: 1130127979}
   meleeRange: 10
-  rbRotationSpeed: 5
+  rbRotationSpeed: 10
   maxDistance: 50
-  speed: 5
+  speed: 20
 --- !u!95 &1964465309
 Animator:
   serializedVersion: 3

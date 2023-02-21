@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8865328513074770305}
   - component: {fileID: 279604218604371694}
   - component: {fileID: -2958355157944165665}
-  - component: {fileID: 5878493505555409232}
+  - component: {fileID: -1049992156066224261}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8630744745180334213}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.41, y: 2.14, z: -13.185521}
+  m_LocalRotation: {x: 0.5583096, y: -0.70581096, z: 0.3192018, w: -0.29703793}
+  m_LocalPosition: {x: 664.05774, y: 129.38266, z: 679.1578}
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,12 +130,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5878493505555409232
+--- !u!114 &-1049992156066224261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,19 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8630744745180334213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a5b58b4f2f991740a6a58bd039e1692, type: 3}
+  m_Script: {fileID: 11500000, guid: 132ab1613bcc19e44a091bd5b16ac20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  destroyOnHit: 1
-  camShakeMagnitude: 1
-  camShakeDuration: 1
-  camShake: {fileID: 0}
-  muzzleEffect: {fileID: 0}
-  hitEffect: {fileID: 0}
-  isExplosive: 0
-  explosionRadius: 0
-  explosionForce: 0
-  explosionDamage: 0
-  explosionEffect: {fileID: 0}
-  audioClipList: []
+  damage: 20

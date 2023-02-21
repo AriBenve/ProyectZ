@@ -18,8 +18,11 @@ public class Boss_S : Enemy
     [Header("Fire Ball")]
     [SerializeField] Transform spawnFire;
     [SerializeField] GameObject fire_ball;
-    [SerializeField] List<GameObject> pool2 = new List<GameObject>();
+    [SerializeField] List<GameObject> firepool = new List<GameObject>();
 
+    [Header("Flamethrower")]
+
+    
     [Header("Melee Attack")]
     [SerializeField] GameObject[] hitbox;
     [SerializeField] int meleeRange;
@@ -97,17 +100,17 @@ public class Boss_S : Enemy
 
     public GameObject Get_Fire_Ball()
     {
-        for (int i = 0; i < pool2.Count; i++)
+        for (int i = 0; i < firepool.Count; i++)
         {
-            if (!pool2[i].activeInHierarchy)
+            if (!firepool[i].activeInHierarchy)
             {
-                pool2[i].SetActive(true);
-                return pool2[i];
+                firepool[i].SetActive(true);
+                return firepool[i];
             }
         }
         GameObject obj = Instantiate(fire_ball, spawnFire.transform.position, spawnFire.transform.rotation) as GameObject;
         obj.GetComponent<Rigidbody>().AddForce(transform.forward * 32f, ForceMode.Impulse);
-        pool2.Add(obj);
+        firepool.Add(obj);
         return obj;
     }
 
@@ -118,6 +121,10 @@ public class Boss_S : Enemy
         obj.transform.rotation = spawnFire.transform.rotation;
     }
 
+    public void Clear_Fire_Ball_List()
+    {
+        firepool.Clear();
+    }
     /////////////////////////////////////
     #endregion
     #region Animaciones
@@ -126,6 +133,7 @@ public class Boss_S : Enemy
         rutine = 0;
         anim.SetBool("attack", false);
         attacking = false;
+        Clear_Fire_Ball_List();
     }
     #endregion
     #region Melee
