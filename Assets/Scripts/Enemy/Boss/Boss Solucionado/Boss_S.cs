@@ -14,10 +14,11 @@ public class Boss_S : Enemy
     
     [Header("Animations")]
     public Animator anim;
-    public RangoBoss RGB;
 
     [Header("Fire Ball")]
     [SerializeField] Transform spawnFire;
+    [SerializeField] GameObject fire_ball;
+    [SerializeField] List<GameObject> pool2 = new List<GameObject>();
 
     [Header("Melee Attack")]
     [SerializeField] GameObject[] hitbox;
@@ -35,6 +36,7 @@ public class Boss_S : Enemy
     private void Start()
     {
         attacking = false;
+        rutine = 0;
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         player = FindObjectOfType<Player>().gameObject;
@@ -45,23 +47,23 @@ public class Boss_S : Enemy
         actualdistance = Vector3.Distance(player.transform.position, transform.position);
         if (actualdistance <= maxDistance && !attacking)
         {
-            SelectRutine();
             StateMachine();
+            SelectRutine(); 
         }
     }
 
     #region Comportamiento
     void SelectRutine()
     {
-        if(actualdistance <= maxDistance && actualdistance >= range)
+        if(actualdistance <= maxDistance && actualdistance > range)
         {
             rutine = 0;
         }
-        else if(actualdistance <= range && actualdistance >= meleeRange)
+        else if(actualdistance <= range && actualdistance > meleeRange)
         {
             rutine = 2;
         }
-        else if(actualdistance <= meleeRange)
+        else if(actualdistance < meleeRange)
         {
             rutine = 1;
         }
@@ -78,17 +80,45 @@ public class Boss_S : Enemy
             case 1: //Ataque Melee
                 print("hola mundo de los melees");
                 attacking = true;
-                anim.SetFloat("skills", 0f);
                 anim.SetBool("attack", true);
+                anim.SetFloat("skills", 0f);
                 break;
             case 2: //Bola de fuego
                 print("hola mundo de los fuegos");
                 attacking = true;
-                anim.SetFloat("skills", 1f);
                 anim.SetBool("attack", true);
+                anim.SetFloat("skills", 1f);
                 break;
         }
     }
+    #endregion
+    #region Fire Ball
+    ////////---- Fire Ball ----//////   
+
+    public GameObject Get_Fire_Ball()
+    {
+        for (int i = 0; i < pool2.Count; i++)
+        {
+            if (!pool2[i].activeInHierarchy)
+            {
+                pool2[i].SetActive(true);
+                return pool2[i];
+            }
+        }
+        GameObject obj = Instantiate(fire_ball, spawnFire.transform.position, spawnFire.transform.rotation) as GameObject;
+        obj.GetComponent<Rigidbody>().AddForce(transform.forward * 32f, ForceMode.Impulse);
+        pool2.Add(obj);
+        return obj;
+    }
+
+    public void Fire_Ball_Skill()
+    {
+        GameObject obj = Get_Fire_Ball();
+        obj.transform.position = spawnFire.transform.position;
+        obj.transform.rotation = spawnFire.transform.rotation;
+    }
+
+    /////////////////////////////////////
     #endregion
     #region Animaciones
     public void endAnim()
@@ -101,18 +131,17 @@ public class Boss_S : Enemy
     #region Melee
     public void ColliderWeaponTrue()
     {
-        hitbox[hit_Select].GetComponent<SphereCollider>().enabled = true;
+        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = true;
     }
     public void ColliderWeaponFalse()
     {
-        hitbox[hit_Select].GetComponent<SphereCollider>().enabled = false;
+        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = false;
     }
     #endregion
     #region Movement
     void Chase()
     {
-        anim.SetBool("walk", true);
-        anim.SetBool("run", false);
+        anim.SetBool("run", true);
         RotateRB();
         rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
     }

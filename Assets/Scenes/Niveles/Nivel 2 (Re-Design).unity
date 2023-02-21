@@ -331,12 +331,12 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2181764933334896071, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
+      propertyPath: m_Mass
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2181764933334896071, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 2249774096708480646, guid: 4ec76574cb4602b4c80b0ca4bd4bd203, type: 3}
       propertyPath: m_Layer
@@ -9437,6 +9437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500272441}
   - component: {fileID: 500272442}
+  - component: {fileID: 500272443}
   m_Layer: 7
   m_Name: Hit
   m_TagString: Untagged
@@ -9472,6 +9473,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &500272443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500272440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d944011ff276b4287b4c199cb8df85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
 --- !u!1 &502932194
 GameObject:
   m_ObjectHideFlags: 0
@@ -25162,6 +25176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130127980}
   - component: {fileID: 1130127981}
+  - component: {fileID: 1130127982}
   m_Layer: 7
   m_Name: Hit2
   m_TagString: Untagged
@@ -25197,6 +25212,19 @@ CapsuleCollider:
   m_Height: 0.69537205
   m_Direction: 1
   m_Center: {x: 9.139991e-10, y: -0.15231399, z: 0.21738909}
+--- !u!114 &1130127982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130127979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d944011ff276b4287b4c199cb8df85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
 --- !u!1001 &1132326012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47414,17 +47442,18 @@ MonoBehaviour:
   _life: 1000
   maxLife: 1000
   _sandtornado: {fileID: 276894145092734396, guid: 19b3bce631427f7438833c536a3707b0, type: 3}
-  range: 20
+  range: 30
   CD: 0
   CDBetweenRutines: 2
   rutine: 1
   anim: {fileID: 1964465309}
-  RGB: {fileID: 0}
   spawnFire: {fileID: 1411319047}
+  fire_ball: {fileID: 8630744745180334213, guid: 4726c825da0393542861ee369fdbe5cd, type: 3}
+  pool2: []
   hitbox:
   - {fileID: 500272440}
   - {fileID: 1130127979}
-  meleeRange: 5
+  meleeRange: 10
   rbRotationSpeed: 5
   maxDistance: 50
   speed: 5
