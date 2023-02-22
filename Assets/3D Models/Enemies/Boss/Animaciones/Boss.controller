@@ -380,7 +380,7 @@ BlendTree:
     m_DirectBlendParameter: skills
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 6ce6c5e39eec57f49a7352760f279ab8, type: 3}
+    m_Motion: {fileID: 7400000, guid: 599d01543ad5789449f70a002534714b, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1

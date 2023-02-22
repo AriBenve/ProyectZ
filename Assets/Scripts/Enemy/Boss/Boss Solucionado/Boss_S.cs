@@ -50,6 +50,7 @@ public class Boss_S : Enemy
 
     private void Update()
     {
+        CD += 1 * Time.deltaTime;
         actualdistance = Vector3.Distance(player.transform.position, transform.position);
         if (actualdistance <= maxDistance && !attacking)
         {
@@ -67,11 +68,15 @@ public class Boss_S : Enemy
         }
         else if(actualdistance <= range && actualdistance > meleeRange)
         {
-            rutine = 2;
+            rutine = 3;
         }
         else if(actualdistance < meleeRange)
         {
             rutine = 1;
+        }
+        else if(CD >= CDBetweenRutines)
+        {
+            rutine = 2;
         }
     }
 
