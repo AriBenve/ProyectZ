@@ -21,7 +21,10 @@ public class Boss_S : Enemy
     [SerializeField] List<GameObject> firepool = new List<GameObject>();
 
     [Header("Flamethrower")]
-
+    
+    [Header("Invoke")]
+    public List<Transform> spawns = new List<Transform>();
+    public List<GameObject> enemies = new List<GameObject>();
     
     [Header("Melee Attack")]
     [SerializeField] GameObject[] hitbox;
@@ -77,20 +80,22 @@ public class Boss_S : Enemy
         switch(rutine)
         {
             case 0: //Caminar
-                print("Run");
                 Chase();
                 break;
             case 1: //Ataque Melee
-                print("hola mundo de los melees");
                 attacking = true;
                 anim.SetBool("attack", true);
                 anim.SetFloat("skills", 0f);
                 break;
             case 2: //Bola de fuego
-                print("hola mundo de los fuegos");
                 attacking = true;
                 anim.SetBool("attack", true);
                 anim.SetFloat("skills", 1f);
+                break;
+            case 3:
+                attacking = true;
+                anim.SetBool("attack", true);
+                anim.SetFloat("skills", 0.67f);
                 break;
         }
     }
@@ -144,6 +149,17 @@ public class Boss_S : Enemy
     public void ColliderWeaponFalse()
     {
         hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = false;
+    }
+    #endregion
+    #region Invoke
+    private void Invoke()
+    {
+        
+        foreach(Transform cant in spawns)
+        {
+            int i = Random.Range(0, enemies.Count);
+            GameObject newEnemy = Instantiate(enemies[i], cant.position, Quaternion.identity);
+        }
     }
     #endregion
     #region Movement
