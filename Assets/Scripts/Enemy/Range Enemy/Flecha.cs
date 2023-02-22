@@ -9,7 +9,7 @@ public class Flecha : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var p = other.gameObject.GetComponent<Idamage>();
-        var e = other.gameObject.GetComponent<Movent_Enemy>();
+        var e = other.gameObject.GetComponent<Enemy>();
         
         if (p != null)
         {

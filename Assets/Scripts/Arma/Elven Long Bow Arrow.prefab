@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 200
-  destroyOnHit: 0
+  destroyOnHit: 1
   camShakeMagnitude: 0.5
   camShakeDuration: 0.3
   camShake: {fileID: 0}

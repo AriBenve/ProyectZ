@@ -119,7 +119,7 @@ public class Boss_S : Enemy
             }
         }
         GameObject obj = Instantiate(fire_ball, spawnFire.transform.position, spawnFire.transform.rotation) as GameObject;
-        obj.GetComponent<Rigidbody>().AddForce(transform.forward * 32f, ForceMode.Impulse);
+        obj.GetComponent<Rigidbody>().AddForce(transform.forward * 64f, ForceMode.Impulse);
         firepool.Add(obj);
         return obj;
     }
