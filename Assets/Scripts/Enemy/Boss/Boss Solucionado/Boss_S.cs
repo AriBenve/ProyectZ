@@ -18,10 +18,12 @@ public class Boss_S : Enemy
     [Header("Fire Ball")]
     [SerializeField] Transform spawnFire;
     [SerializeField] GameObject fire_ball;
-    [SerializeField] List<GameObject> firepool = new List<GameObject>();
+    List<GameObject> firepool = new List<GameObject>();
 
     [Header("Flamethrower")]
-    
+    bool lanza_llamas;
+    [SerializeField] GameObject flame;
+
     [Header("Invoke")]
     public List<Transform> spawns = new List<Transform>();
     public List<GameObject> enemies = new List<GameObject>();
@@ -57,26 +59,30 @@ public class Boss_S : Enemy
             StateMachine();
             SelectRutine(); 
         }
+        if (CD > CDBetweenRutines + 1)
+        {
+            CD = 0;
+        }
     }
 
     #region Comportamiento
     void SelectRutine()
     {
-        if(actualdistance <= maxDistance && actualdistance > range)
+        if (CD >= CDBetweenRutines)
+        {
+            rutine = 3;
+        }
+        else if (actualdistance <= maxDistance && actualdistance > range)
         {
             rutine = 0;
         }
         else if(actualdistance <= range && actualdistance > meleeRange)
         {
-            rutine = 3;
+            rutine = 2;
         }
         else if(actualdistance < meleeRange)
         {
             rutine = 1;
-        }
-        else if(CD >= CDBetweenRutines)
-        {
-            rutine = 2;
         }
     }
 
@@ -136,6 +142,16 @@ public class Boss_S : Enemy
         firepool.Clear();
     }
     /////////////////////////////////////
+    #endregion
+    #region Flamethrower
+    public void Start_Fire()
+    {
+        flame.SetActive(true);
+    }
+    public void Stop_Fire()
+    {
+        flame.SetActive(true);
+    }
     #endregion
     #region Animaciones
     public void endAnim()

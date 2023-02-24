@@ -6,14 +6,21 @@ public class FireWalls : MonoBehaviour
 {
     public float dmg;
     public float timer;
+    public float camShakeMagnitude, camShakeDuration;
 
-    private void OnTriggerEnter(Collider other)
+    [Header("References")]
+    [SerializeField] CameraShake camShake;
+    [SerializeField] AudioSource AS;
+
+    private void OnTriggerStay(Collider other)
     {
         Player player = other.GetComponent<Player>();
 
         if (player != null)
         {
+            AS.Play();
             StartCoroutine(player.GraduallyReduceHP(dmg, timer));
+            StartCoroutine(camShake.Shake(camShakeMagnitude, camShakeDuration));
         }
     }
 }
