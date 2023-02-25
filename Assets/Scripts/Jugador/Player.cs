@@ -20,6 +20,15 @@ public class Player : MonoBehaviour,Idamage
         _life = maxLife;
     }
 
+    private void Update()
+    {
+        if (_life > maxLife && !running)
+        {
+            running = true;
+            StartCoroutine(GraduallyReduceHP(_life - maxLife, 5f));
+        }
+    }
+
     public void Damage(float d)
     {
 
@@ -41,12 +50,6 @@ public class Player : MonoBehaviour,Idamage
     public void Heal(float amount)
     {
         _life += amount;
-
-        if (_life > maxLife && !running)
-        {
-            running = true;
-            StartCoroutine(GraduallyReduceHP(_life - maxLife, 5f));
-        }
     }
 
     public IEnumerator GraduallyReduceHP(float damage, float rate)
