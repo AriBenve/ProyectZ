@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class MeleeEnemy : Movent_Enemy
 {
-
+    [SerializeField] GameObject[] hitbox;
+    int hit_Select;
 
 
     protected override void Update()
@@ -30,7 +31,14 @@ public class MeleeEnemy : Movent_Enemy
         }
     }
 
+    public void ColliderWeaponTrue()
+    {
+        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = true;
+    }
+    public void ColliderWeaponFalse()
+    {
+        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = false;
+    }
 
-   
 
 }

@@ -6,6 +6,7 @@ public class Range_Enemy : Movent_Enemy
 {
 
     bool alreadyAttack;
+    public Transform Point; 
 
     protected override void Update()
     {
@@ -37,14 +38,21 @@ public class Range_Enemy : Movent_Enemy
 
         if (!alreadyAttack)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            Get_Fire_Ball();
 
             alreadyAttack = true;
+            
             Invoke(nameof(ResetAtatck), timeBetweenAttacks);
         }
     }
+    public GameObject Get_Fire_Ball()
+    {
 
+        GameObject obj = Instantiate(projectile, Point.transform.position, Point.transform.rotation) as GameObject;
+        obj.GetComponent<Rigidbody>().AddForce(transform.forward * 64f, ForceMode.Impulse);
+
+        return obj;
+    }
 
 
     private void ResetAtatck()

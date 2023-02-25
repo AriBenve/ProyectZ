@@ -20,13 +20,15 @@ public abstract class Movent_Enemy : Enemy
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+
+
     protected virtual void Awake()
     {
         player = GameObject.FindObjectOfType<Player>().transform;
         enemy = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
     }
-
+   
     protected virtual void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, PlayerMask);
