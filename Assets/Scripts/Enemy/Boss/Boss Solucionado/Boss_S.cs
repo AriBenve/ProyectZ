@@ -54,6 +54,7 @@ public class Boss_S : Enemy
     {
         CD += 1 * Time.deltaTime;
         actualdistance = Vector3.Distance(player.transform.position, transform.position);
+        RotateRB();
         if (actualdistance <= maxDistance && !attacking)
         {
             StateMachine();
@@ -68,9 +69,17 @@ public class Boss_S : Enemy
     #region Comportamiento
     void SelectRutine()
     {
-        if (CD >= CDBetweenRutines)
+        if(CD >= CDBetweenRutines)
         {
-            rutine = 3;
+            if(actualdistance > range)
+            {
+                rutine = 3;
+            }
+            else
+            {
+                rutine = 4;
+            }
+            
         }
         else if (actualdistance <= maxDistance && actualdistance > range)
         {
@@ -107,6 +116,11 @@ public class Boss_S : Enemy
                 attacking = true;
                 anim.SetBool("attack", true);
                 anim.SetFloat("skills", 0.67f);
+                break;
+            case 4:
+                attacking = true;
+                anim.SetBool("attack", true);
+                anim.SetFloat("skills", 0.3333333f);
                 break;
         }
     }
@@ -150,7 +164,7 @@ public class Boss_S : Enemy
     }
     public void Stop_Fire()
     {
-        flame.SetActive(true);
+        flame.SetActive(false);
     }
     #endregion
     #region Animaciones
@@ -187,7 +201,6 @@ public class Boss_S : Enemy
     void Chase()
     {
         anim.SetBool("run", true);
-        RotateRB();
         rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
     }
 
