@@ -4935,7 +4935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8174777587349226006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_spine_02SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5080,9 +5080,9 @@ GameObject:
   - component: {fileID: 919132147874271387}
   - component: {fileID: 919132147874271386}
   - component: {fileID: 919132147874271388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Golem
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5167,13 +5167,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   timeBetweenAttacks: 0
-  sightRange: 3
-  attackRange: 3
+  sightRange: 5
+  attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
   Speed: 0
-  ChargerDistance: 40
-  WalkDistance: 1
+  WalkDistance: 10
   timer: 0
   hitbox: []
 --- !u!1 &1069468146537220873
@@ -5185,7 +5184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8984929553940553525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_leg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5201,7 +5200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5655954472999799563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_MAINSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5217,7 +5216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3853553601476591306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_arm_ElbowSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5233,7 +5232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6199537227425884053}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_arm_ShoulderSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5250,7 +5249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3183993429332865848}
   - component: {fileID: 805683498355239435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_elemental
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5311,7 +5310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314483914612280175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_fire_02_extr_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5341,7 +5340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8235847224228005352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_ROOTSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5372,7 +5371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7491178585374455030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_leg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5388,7 +5387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7616645820012296090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_arm_ClavicleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5419,7 +5418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2624684810104961627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_leg_AnkleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5435,7 +5434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2819283479749896710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_arm_ShoulderSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5451,7 +5450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 591688301919332712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_spine_TopSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5481,7 +5480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6868410017157917705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_leg_BallSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5512,7 +5511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6317685224707094039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_arm_WristSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5543,7 +5542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5111617010526585409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_fire_01_extr_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5588,7 +5587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7625288962498656956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_spine_03SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5618,7 +5617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6090574232727455658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_leg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8069120821106068729}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_leg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5665,7 +5664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106726382391845035}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_leg_HipSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,7 +5680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7155263253219663615}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_leg_KneeSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5770,7 +5769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8006949728354788900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_fire_03_extr_01_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5832,7 +5831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1999045235445540447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_l_arm_ClavicleSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5863,7 +5862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466708258947697588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_arm_ElbowSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5879,7 +5878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8374376993517018084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_r_arm_WristSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5895,7 +5894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4594969546843588098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lava_spine_01SHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Golem : Movent_Enemy
 {
     [SerializeField] float Speed;
-    [SerializeField] int ChargerDistance;
+    /*[SerializeField] int ChargerDistance;*/
     [SerializeField] float WalkDistance;
     [SerializeField] int timer;
     float Distance;
@@ -28,13 +28,13 @@ public class Golem : Movent_Enemy
 
         _anim.SetBool("Attacking", playerInSightRange && playerInAttackRange);
 
-        if (ChargerDistance <= Distance && Distance > WalkDistance)
+        if (/*ChargerDistance >= Distance &&*/ Distance > WalkDistance)
         {
             enemy.speed = 10;
             _anim.SetBool("Charging", true);
             
         }
-        else if(Distance >= WalkDistance)
+        else
         {
             enemy.speed = 5;
             _anim.SetBool("Charging", false);
