@@ -59,21 +59,4 @@ public class Golem : Movent_Enemy
     {
         hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = false;
     }
-
-    private void Charge()
-    {
-        
-
-
-
-    }
-
-  
-
-
-
-
-
-
-
 }
