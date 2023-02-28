@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003007, b: 0.3356672, a: 1}
+  m_IndirectSpecularColor: {r: 0.11478237, g: 0.28003004, b: 0.33566722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22970,6 +22970,7 @@ Transform:
   - {fileID: 1716882882}
   - {fileID: 910357092}
   - {fileID: 66809395}
+  - {fileID: 2064282511}
   - {fileID: 77143894}
   - {fileID: 984771224}
   - {fileID: 174068643}
@@ -22979,7 +22980,6 @@ Transform:
   - {fileID: 860929323}
   - {fileID: 1086019609}
   - {fileID: 623566301}
-  - {fileID: 2064282511}
   - {fileID: 1671381875}
   - {fileID: 107193533}
   - {fileID: 1607067959}
@@ -32539,7 +32539,7 @@ Transform:
   m_Children:
   - {fileID: 548548315}
   m_Father: {fileID: 1523216585}
-  m_RootOrder: 29
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -58.6, z: 0}
 --- !u!23 &2064282512
 MeshRenderer:
