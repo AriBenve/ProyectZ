@@ -18,7 +18,10 @@ public class FireWalls : MonoBehaviour
 
         if (player != null)
         {
-            AS.Play();
+            if(!AS.isPlaying)
+            {
+                AS.Play();
+            }
             StartCoroutine(player.GraduallyReduceHP(dmg, timer));
             StartCoroutine(camShake.Shake(camShakeMagnitude, camShakeDuration));
         }

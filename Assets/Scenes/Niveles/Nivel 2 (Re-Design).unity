@@ -7245,6 +7245,7 @@ MonoBehaviour:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  - {fileID: 1481376680296045106, guid: 3f9f872a12163be4eb8f9f8843ff280d, type: 3}
   timeInterval: 1
   EnemiesSpawn: 50
 --- !u!4 &388967169
@@ -10050,8 +10051,8 @@ MonoBehaviour:
   timer: 50
   camShakeMagnitude: 0
   camShakeDuration: 0
-  camShake: {fileID: 0}
-  AS: {fileID: 0}
+  camShake: {fileID: 1290079833}
+  AS: {fileID: 1022447293}
 --- !u!65 &530694723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12903,8 +12904,8 @@ MonoBehaviour:
   timer: 50
   camShakeMagnitude: 0
   camShakeDuration: 0
-  camShake: {fileID: 0}
-  AS: {fileID: 0}
+  camShake: {fileID: 1290079833}
+  AS: {fileID: 1022447293}
 --- !u!65 &704776555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25180,8 +25181,8 @@ MonoBehaviour:
   timer: 50
   camShakeMagnitude: 0
   camShakeDuration: 0
-  camShake: {fileID: 0}
-  AS: {fileID: 0}
+  camShake: {fileID: 1290079833}
+  AS: {fileID: 1022447293}
 --- !u!65 &1112391456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37115,8 +37116,8 @@ MonoBehaviour:
   timer: 50
   camShakeMagnitude: 0
   camShakeDuration: 0
-  camShake: {fileID: 0}
-  AS: {fileID: 0}
+  camShake: {fileID: 1290079833}
+  AS: {fileID: 1022447293}
 --- !u!1001 &1602233957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40115,6 +40116,7 @@ MonoBehaviour:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  - {fileID: 1481376680296045106, guid: 3f9f872a12163be4eb8f9f8843ff280d, type: 3}
   timeInterval: 1
   EnemiesSpawn: 50
 --- !u!4 &1777758741
@@ -42440,6 +42442,7 @@ MonoBehaviour:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  - {fileID: 1481376680296045106, guid: 3f9f872a12163be4eb8f9f8843ff280d, type: 3}
   timeInterval: 1
   EnemiesSpawn: 25
 --- !u!4 &1925246014
@@ -48256,6 +48259,7 @@ MonoBehaviour:
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  - {fileID: 1481376680296045106, guid: 3f9f872a12163be4eb8f9f8843ff280d, type: 3}
   hitbox:
   - {fileID: 500272440}
   - {fileID: 1130127979}
@@ -51435,6 +51439,7 @@ MonoBehaviour:
   - {fileID: 6021108055465708198, guid: ccf922966342928439fa05234547b3f9, type: 3}
   - {fileID: 2594308401758562256, guid: c05b30b543f7ebc469a447f41d5d26b6, type: 3}
   - {fileID: 4597166239615529459, guid: 1e390033159d326489b011ad70c6092e, type: 3}
+  - {fileID: 1481376680296045106, guid: 3f9f872a12163be4eb8f9f8843ff280d, type: 3}
   timeInterval: 1
   EnemiesSpawn: 30
 --- !u!4 &2059869594

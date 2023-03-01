@@ -54,7 +54,7 @@ public class ManagerMenu : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 4)
             Pasardelevel();
-        else
+        else if(other.GetComponent<Player>() != null)
             Victoria();
 
     }

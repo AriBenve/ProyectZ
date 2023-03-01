@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Invoke_Spawner : MonoBehaviour
 {
@@ -44,7 +45,22 @@ public class Invoke_Spawner : MonoBehaviour
             }
             else if (i > 94)
             {
-                GameObject newEnemy = Instantiate(enemy[2], spawnPoints[j].position, Quaternion.identity);
+                if(SceneManager.GetActiveScene().name != "Nivel 1")
+                {
+                    int z = Random.Range(0, 1);
+                    if(z == 0)
+                    {
+                        GameObject newEnemy = Instantiate(enemy[2], spawnPoints[j].position, Quaternion.identity);
+                    }
+                    else
+                    {
+                        GameObject newEnemy = Instantiate(enemy[3], spawnPoints[j].position, Quaternion.identity);
+                    }
+                }
+                else
+                {
+                    GameObject newEnemy = Instantiate(enemy[2], spawnPoints[j].position, Quaternion.identity);
+                }
             }
 
             count++;
