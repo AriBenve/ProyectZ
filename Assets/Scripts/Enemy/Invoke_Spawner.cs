@@ -47,7 +47,7 @@ public class Invoke_Spawner : MonoBehaviour
             {
                 if(SceneManager.GetActiveScene().name != "Nivel 1")
                 {
-                    int z = Random.Range(0, 1);
+                    int z = Random.Range(0, 2);
                     if(z == 0)
                     {
                         GameObject newEnemy = Instantiate(enemy[2], spawnPoints[j].position, Quaternion.identity);

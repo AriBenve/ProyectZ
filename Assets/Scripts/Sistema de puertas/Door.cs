@@ -1,10 +1,11 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
     public int minKillsOpen;
+    [SerializeField] AudioSource AS;
 
     private void Start()
     {
@@ -18,7 +19,8 @@ public class Door : MonoBehaviour
         {
             ManagerEnemy.instance.EventKillEnemy -= KillEnemy;
             ManagerEnemy.instance.ResetKills();
-            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(AS.clip, this.gameObject.transform.position);
+            this.gameObject.SetActive(false);
         }
     }
 }

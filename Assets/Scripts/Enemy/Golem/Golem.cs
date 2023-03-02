@@ -28,15 +28,15 @@ public class Golem : Movent_Enemy
 
         _anim.SetBool("Attacking", playerInSightRange && playerInAttackRange);
 
-        if (/*ChargerDistance >= Distance &&*/ Distance > WalkDistance)
+        if (Distance > WalkDistance)
         {
-            enemy.speed = 10;
+            enemy.speed = 30;
             _anim.SetBool("Charging", true);
             
         }
         else
         {
-            enemy.speed = 5;
+            enemy.speed = 10;
             _anim.SetBool("Charging", false);
         }
 
@@ -53,10 +53,10 @@ public class Golem : Movent_Enemy
 
     public void ColliderWeaponTrue()
     {
-        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = true;
+        hitbox[hit_Select].GetComponent<Collider>().enabled = true;
     }
     public void ColliderWeaponFalse()
     {
-        hitbox[hit_Select].GetComponent<CapsuleCollider>().enabled = false;
+        hitbox[hit_Select].GetComponent<Collider>().enabled = false;
     }
 }
