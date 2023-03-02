@@ -42,7 +42,7 @@ public class ManagerMenu : MonoBehaviour
 
     public void Pasardelevel()
     {
-        SceneManager.LoadScene("Nivel 2 (Re-Design)");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Victoria()
@@ -52,7 +52,7 @@ public class ManagerMenu : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(SceneManager.GetActiveScene().buildIndex == 4)
+        if(SceneManager.GetActiveScene().buildIndex <= 4)
             Pasardelevel();
         else if(other.GetComponent<Player>() != null)
             Victoria();
