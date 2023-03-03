@@ -84192,13 +84192,6 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.96666664
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.96666664
     functionName: Get_Fire_Ball
     data: 
     objectReferenceParameter: {fileID: 0}
