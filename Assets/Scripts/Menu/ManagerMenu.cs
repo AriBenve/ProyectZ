@@ -42,6 +42,8 @@ public class ManagerMenu : MonoBehaviour
 
     public void Pasardelevel()
     {
+        ManagerEnemy MC = FindObjectOfType<ManagerEnemy>();
+        MC.ResetKills();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

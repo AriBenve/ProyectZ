@@ -5951,6 +5951,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 2071225676}
+    - target: {fileID: 65842450135977428, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 65842450393236408, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: cameraPosition
       value: 
@@ -6031,6 +6035,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 375771754879818274, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 524118946923849827, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_Layer
       value: 15
@@ -6074,14 +6082,6 @@ PrefabInstance:
     - target: {fileID: 3417367735339143053, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_Layer
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4043261527797780121, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.209
-      objectReference: {fileID: 0}
-    - target: {fileID: 4043261527797780121, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4047729349239156762, guid: e4a7e06c8c684014480e677ed72e6cdc, type: 3}
       propertyPath: m_Layer
@@ -7447,8 +7447,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50.088882, y: 21.334713, z: 3.0509644}
-  m_Center: {x: -5.2438736, y: 1.5851455, z: -1.0254822}
+  m_Size: {x: 50.088882, y: 29.416264, z: 46.04322}
+  m_Center: {x: -5.2438736, y: 5.6259212, z: 16.827145}
 --- !u!114 &388967168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40603,8 +40603,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50.088882, y: 21.334713, z: 3.0509644}
-  m_Center: {x: -5.2438736, y: 1.5851455, z: -1.0254822}
+  m_Size: {x: 59.20424, y: 21.334713, z: 47.372597}
+  m_Center: {x: -0.6861954, y: 1.585146, z: -23.186298}
 --- !u!114 &1777758740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43003,8 +43003,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 47.00581, y: 15.847751, z: 3.0509644}
-  m_Center: {x: -5.65856, y: -1.1583352, z: -1.0254822}
+  m_Size: {x: 66.73878, y: 15.847751, z: 58.376152}
+  m_Center: {x: -8.321796, y: -1.1583352, z: 5.32732}
 --- !u!1 &1925260721 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010572747236, guid: f159a1b75fe800545869a115d68acdcd, type: 3}
@@ -48723,10 +48723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73eca76a62054c4c89cf4af444d42b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 15000
-  maxLife: 15000
+  _life: 5000
+  maxLife: 5000
   _sandtornado: {fileID: 276894145092734396, guid: 19b3bce631427f7438833c536a3707b0, type: 3}
-  range: 50
+  range: 100
   attackRange: 20
   CD: 0
   CDBetweenRutines: 3
@@ -51999,8 +51999,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50.088882, y: 21.334713, z: 3.0509644}
-  m_Center: {x: -5.2438736, y: 1.5851455, z: -1.0254822}
+  m_Size: {x: 64.14954, y: 21.334713, z: 60.527588}
+  m_Center: {x: -6.4100876, y: 1.585146, z: 10.846466}
 --- !u!114 &2059869593
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class Invoke_Spawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!CR_Running)
+        if(!CR_Running && other.GetComponent<Player>() != null)
         StartCoroutine(spawnEnemy(timeInterval, Enemies));
     }
 

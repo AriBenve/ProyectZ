@@ -86,6 +86,7 @@ public class GunSystem : MonoBehaviour
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         var flash = Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         flash.transform.parent = attackPoint.transform;
+        flash.GetComponent<ParticleSystem>().Play();
         flash = null;
 
         _bulletsLeft--;
