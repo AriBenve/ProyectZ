@@ -5226,7 +5226,7 @@ PrefabInstance:
       objectReference: {fileID: 146732328}
     - target: {fileID: 5322752208277912530, guid: ea207b00a741d8341bdb864f41a63e0b, type: 3}
       propertyPath: minKillsOpen
-      value: 6
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5322752208277912531, guid: ea207b00a741d8341bdb864f41a63e0b, type: 3}
       propertyPath: m_RootOrder
@@ -7461,7 +7461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 8
+  minKillsDisable: 60
   spawnPoints:
   - {fileID: 1473843132}
   - {fileID: 179252265}
@@ -12952,7 +12952,7 @@ PrefabInstance:
       objectReference: {fileID: 854999914}
     - target: {fileID: 5322752208277912530, guid: ea207b00a741d8341bdb864f41a63e0b, type: 3}
       propertyPath: minKillsOpen
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5322752208277912531, guid: ea207b00a741d8341bdb864f41a63e0b, type: 3}
       propertyPath: m_RootOrder
@@ -40617,7 +40617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 3
+  minKillsDisable: 55
   spawnPoints:
   - {fileID: 1156541647}
   - {fileID: 1446142759}
@@ -42953,7 +42953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 2
+  minKillsDisable: 25
   spawnPoints:
   - {fileID: 439504307}
   - {fileID: 840904845}
@@ -48727,6 +48727,7 @@ MonoBehaviour:
   maxLife: 15000
   _sandtornado: {fileID: 276894145092734396, guid: 19b3bce631427f7438833c536a3707b0, type: 3}
   range: 50
+  attackRange: 20
   CD: 0
   CDBetweenRutines: 3
   rutine: 0
@@ -51804,7 +51805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760b72fc22ac084a9f2a5c3f079bf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsOpen: 10
+  minKillsOpen: 50
   AS: {fileID: 2048928052}
 --- !u!64 &2048928055
 MeshCollider:
@@ -52012,7 +52013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fd73197897e79408a31cd154a5be13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minKillsDisable: 3
+  minKillsDisable: 35
   spawnPoints:
   - {fileID: 1599250306}
   - {fileID: 252366785}

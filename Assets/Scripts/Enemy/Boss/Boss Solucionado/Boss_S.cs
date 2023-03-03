@@ -6,6 +6,7 @@ public class Boss_S : Enemy
 {
     [Header("Rutine")]
     [SerializeField] int range;
+    [SerializeField] int attackRange;
     [SerializeField] float CD; //CoolDown
     [SerializeField] float CDBetweenRutines;
     [SerializeField] int rutine;
@@ -71,7 +72,7 @@ public class Boss_S : Enemy
     {
         if(CD >= CDBetweenRutines)
         {
-            if(actualdistance > range)
+            if(actualdistance > attackRange)
             {
                 rutine = 3;
             }
@@ -85,7 +86,7 @@ public class Boss_S : Enemy
         {
             rutine = 0;
         }
-        else if(actualdistance <= range && actualdistance > meleeRange)
+        else if(actualdistance <= attackRange && actualdistance > meleeRange)
         {
             rutine = 2;
         }
