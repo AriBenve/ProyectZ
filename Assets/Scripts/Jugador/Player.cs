@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour,Idamage
 {
     [Header("Floats")]
-    public float _life;
-    public float maxLife;
+    [SerializeField] float maxLife;
+    float _life;
 
     [Header("Bools")]
     private bool running;
@@ -27,6 +27,16 @@ public class Player : MonoBehaviour,Idamage
             running = true;
             StartCoroutine(GraduallyReduceHP(_life - maxLife, 5f));
         }
+    }
+
+    public float GetLife()
+    {
+        return _life;
+    }
+
+    public float GetMaxLife()
+    {
+        return maxLife;
     }
 
     public void Damage(float d)

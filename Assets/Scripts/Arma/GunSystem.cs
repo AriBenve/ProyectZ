@@ -5,6 +5,9 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
+    delegate void ShootDelegate();
+    ShootDelegate shoot;
+    
     [Header("Gun Stats")]
     public int dmg;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
@@ -27,7 +30,7 @@ public class GunSystem : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     public CameraShake camShake;
     public TextMeshProUGUI text;
-    [SerializeField] private TrailRenderer BulletTrail;
+    [SerializeField] TrailRenderer BulletTrail;
 
 
     [Header("Audio")]
@@ -39,6 +42,7 @@ public class GunSystem : MonoBehaviour
         _bulletsLeft = magazineSize;
         _readyToShoot = true;
         audioSource = GetComponent<AudioSource>();
+        shoot = Shoot;
     }
 
     private void Update()
@@ -63,7 +67,7 @@ public class GunSystem : MonoBehaviour
         {
             _bulletsShot = bulletsPerTap;
             audioSource.PlayOneShot(audioClipList[i], 0.7f);
-            Shoot();
+            shoot();
         }
             
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public static Enemy enemy;
+    //public static Enemy enemy;
 
     public float _life;
 

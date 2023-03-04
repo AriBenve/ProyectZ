@@ -36,7 +36,7 @@ public class Sword : MonoBehaviour
             {
                 //Curaciones y daño al enemigo
                 var p = FindObjectOfType<Player>();
-                if (p._life <= p.maxLife)
+                if (p.GetLife() <= p.GetMaxLife())
                 {
                     p.Heal(Random.Range(50, _enemy.maxLife));
                 }

@@ -14,12 +14,12 @@ public class HealthBar : MonoBehaviour
     {
         HPBar = GetComponent<Image>();
         player = FindObjectOfType<Player>();
-        maxHealth = player.maxLife;
+        maxHealth = player.GetMaxLife();
     }
 
     private void Update()
     {
-        currentHealth = player._life;
+        currentHealth = player.GetLife();
 
         HPBar.fillAmount = currentHealth / maxHealth;
     }
